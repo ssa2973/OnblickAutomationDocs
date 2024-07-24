@@ -334,4 +334,4 @@ Waits for all pending network requests to complete.
 	```csharp
 	WaitForNoPendingRequests(driver, 60);
 	```
-_Note: This method doesn't work in [Onblick2.0](https://www.onblick.com) as there are always pending signalr calls, so it is unused for now._
+_Note: This method doesn't work in [Onblick2.0](https://www.onblick.com){:target=_blank} as there are always pending signalr calls, so it is unused for now._
