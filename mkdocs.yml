@@ -1,0 +1,67 @@
+site_name: Onblick Automation Reference Guide
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+theme:
+  name: material
+  favicon: assets/images/favicon.png
+  features:
+    - content.code.copy
+    - content.code.select
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: cyan
+      accent: pink
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  logo: assets/images/onblick-logo.gif
+
+nav:
+  - Home: index.md
+  - Prerequisites: prerequisites.md
+  - Project Structure: project-structure.md
+  - Setting Up the Environment: setting-up.md
+  - Writing Your First Test: first-test.md
+  - Running Tests: running-tests.md
+  - Understanding Pre-defined Utilities and Classes: 
+    - AttributeExtensions: attribute-extensions.md
+    - BrowserOptions: browser-options.md
+    - ExtentManager: extent-manager.md
+    - LoginCreds: login-creds.md
+    - ReportsGenerationClass: reports-generation-class.md
+    - SharedFailureContext: shared-failure-context.md
+    - SoftAssertion: soft-assertion.md
+    - TestExecutionHelper: testexecution-helper.md
+    - URLs: urls.md
+    - WaitHelpers: wait-helpers.md
+    - WebElementExtensions: webelement-extensions.md
+  - Page Object Model (POM):
+    - Introduction: pom-introduction.md
+    - Guidelines: pom-guidelines.md
+  - Debugging: debugging.md
+  - Reports: reports.md
+  - Continuous Integration: ci.md
+  - Best Practices: best-practices.md
+  - Using Git: git.md
+  - Troubleshooting: troubleshooting.md
