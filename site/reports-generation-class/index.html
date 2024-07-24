@@ -1,0 +1,2316 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../login-creds/">
+      
+      
+        <link rel="next" href="../shared-failure-context/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
+    
+    
+      
+        <title>ReportsGenerationClass - Onblick Automation Reference Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.76a95c52.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reportsgenerationclass" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Onblick Automation Reference Guide" class="md-header__button md-logo" aria-label="Onblick Automation Reference Guide" data-md-component="logo">
+      
+  <img src="../assets/images/onblick-logo.gif" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Onblick Automation Reference Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ReportsGenerationClass
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Onblick Automation Reference Guide" class="md-nav__button md-logo" aria-label="Onblick Automation Reference Guide" data-md-component="logo">
+      
+  <img src="../assets/images/onblick-logo.gif" alt="logo">
+
+    </a>
+    Onblick Automation Reference Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Up the Environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Your First Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running-tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running Tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Understanding Pre-defined Utilities and Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Understanding Pre-defined Utilities and Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../attribute-extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AttributeExtensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browser-options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BrowserOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extent-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ExtentManager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login-creds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LoginCreds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ReportsGenerationClass
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ReportsGenerationClass
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setextenttest" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExtentTest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getextenttest" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetExtentTest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getextentreport" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetExtentReport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getdrivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetDrivers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmethodbyname" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMethodByName
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportfaileddetails" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExportFailedDetails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resetsubsteps" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResetSubsteps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flush" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flush
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdriver" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetDriver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetUp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beforetest" class="md-nav__link">
+    <span class="md-ellipsis">
+      BeforeTest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aftertest" class="md-nav__link">
+    <span class="md-ellipsis">
+      AfterTest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logreport" class="md-nav__link">
+    <span class="md-ellipsis">
+      LogReport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loginfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      LogInfo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      LogError
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getorcreatenode" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOrCreateNode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logsubstep" class="md-nav__link">
+    <span class="md-ellipsis">
+      LogSubstep
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getreportpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetReportPath
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignauthor" class="md-nav__link">
+    <span class="md-ellipsis">
+      AssignAuthor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switchbrowser" class="md-nav__link">
+    <span class="md-ellipsis">
+      SwitchBrowser
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnetworkcalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetNetworkCalls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getallnetworkcalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAllNetworkCalls
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-failure-context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SharedFailureContext
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soft-assertion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SoftAssertion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testexecution-helper/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TestExecutionHelper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../urls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    URLs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wait-helpers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WaitHelpers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webelement-extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebElementExtensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Page Object Model (POM)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Page Object Model (POM)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pom-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pom-guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setextenttest" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExtentTest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getextenttest" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetExtentTest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getextentreport" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetExtentReport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getdrivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetDrivers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmethodbyname" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMethodByName
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportfaileddetails" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExportFailedDetails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resetsubsteps" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResetSubsteps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flush" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flush
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdriver" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetDriver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetUp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beforetest" class="md-nav__link">
+    <span class="md-ellipsis">
+      BeforeTest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aftertest" class="md-nav__link">
+    <span class="md-ellipsis">
+      AfterTest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logreport" class="md-nav__link">
+    <span class="md-ellipsis">
+      LogReport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loginfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      LogInfo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      LogError
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getorcreatenode" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOrCreateNode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logsubstep" class="md-nav__link">
+    <span class="md-ellipsis">
+      LogSubstep
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getreportpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetReportPath
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignauthor" class="md-nav__link">
+    <span class="md-ellipsis">
+      AssignAuthor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switchbrowser" class="md-nav__link">
+    <span class="md-ellipsis">
+      SwitchBrowser
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnetworkcalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetNetworkCalls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getallnetworkcalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAllNetworkCalls
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="reportsgenerationclass">ReportsGenerationClass</h1>
+<p>This abstract class is used to generate the test reports, it is inherited by <a href="../testexecution-helper/"><code>TestExecutionHelper</code></a>. It uses the <code>ExtentReports</code> library to generate the reports. The reports are generated in the <code>Reports</code> folder in the project directory.</p>
+<p>Below are the methods in the <code>ReportsGenerationClass</code> used to generate the reports:</p>
+<h2 id="members">Members</h2>
+<h3 id="setextenttest">SetExtentTest</h3>
+<p>Sets the name for the current test instance - <code>ExtentTest</code> in the current <code>ExtentReport</code> instance.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Method Signature</label><label for="__tabbed_1_2">Parameters</label><label for="__tabbed_1_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SetExtentTest</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td><code>string</code></td>
+<td>The name of the test instance.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Set Test Name</strong>:<ul>
+<li>Sets the name of the current test instance in the report to the provided <code>name</code>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="getextenttest">GetExtentTest</h3>
+<p>Returns the instance of the <code>ExtentTest</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Method Signature</label><label for="__tabbed_2_2">Returns</label><label for="__tabbed_2_3">Funtionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">ExtentTest</span><span class="w"> </span><span class="nf">GetExtentTest</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><code>ExtentTest</code>: The instance of the <code>ExtentTest</code>.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Return Test Instance</strong>:<ul>
+<li>Returns the <code>_test</code> field, which is an instance of <code>ExtentTest</code>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="getextentreport">GetExtentReport</h3>
+<p>Returns the instance of the <code>ExtentReport</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Method Signature</label><label for="__tabbed_3_2">Returns</label><label for="__tabbed_3_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">ExtentReports</span><span class="w"> </span><span class="nf">GetExtentReport</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><code>ExtentReports</code>: The instance of the <code>ExtentReports</code>.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Return Report Instance</strong>:<ul>
+<li>Returns the <code>_extent</code> field, which is an instance of <code>ExtentReports</code>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="getdrivers">GetDrivers</h3>
+<p>Returns the list of driver instances of <code>WebDriver</code> for the current test.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Method Signature</label><label for="__tabbed_4_2">Returns</label><label for="__tabbed_4_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">IWebDriver</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetDrivers</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><code>List&lt;IWebDriver&gt;</code>: The list of driver instances.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Return Drivers List</strong>:<ul>
+<li>Returns the <code>drivers</code> list, which contains instances of <code>IWebDriver</code>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="getmethodbyname">GetMethodByName</h3>
+<p>Gets a <code>MethodInfo</code> instance of the method by its name. Used in <a href="#beforetest">BeforeTest</a> when the test method has a <code>TestCaseSourceAttribute</code></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Method Signature</label><label for="__tabbed_5_2">Parameters</label><label for="__tabbed_5_3">Returns</label><label for="__tabbed_5_4">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">MethodInfo</span><span class="w"> </span><span class="nf">GetMethodByName</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">methodName</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>methodName</code></td>
+<td><code>string</code></td>
+<td>The name of the method to retrieve.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p><code>MethodInfo</code>: The <code>MethodInfo</code> object representing the method, or <code>null</code> if the method is not found.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Get Executing Assembly:<ul>
+<li>Retrieves the currently executing assembly using <code>Assembly.GetExecutingAssembly()</code>.</li>
+</ul>
+</li>
+<li>Get All Types:<ul>
+<li>Gets all types defined in the executing assembly using <code>executingAssembly.GetTypes()</code>.</li>
+</ul>
+</li>
+<li>Find Method by Name:<ul>
+<li>Iterates through each type to find a method with the specified name using <code>type.GetMethod(methodName)</code>.</li>
+<li>If the method is found, returns the corresponding <code>MethodInfo</code> object.</li>
+</ul>
+</li>
+<li>Return Null if Not Found:<ul>
+<li>If no method with the specified name is found, returns <code>null</code>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="exportfaileddetails">ExportFailedDetails</h3>
+<p>Exports the failed test details to the report and log the status accordingly when the test either fails or is skipped.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Method Signature</label><label for="__tabbed_6_2">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ExportFailedDetails</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Get Test Status</strong>:<ul>
+<li>Retrieves the current test status from <code>TestContext.CurrentContext.Result.Outcome.Status</code>.</li>
+</ul>
+</li>
+<li><strong>Handle Failed Tests</strong>:<ul>
+<li>If the test status is <code>TestStatus.Failed</code>:<ul>
+<li>Captures the current date and time.</li>
+<li>Generates a screenshot filename and captures a screenshot in base64 format.</li>
+<li>Creates a node in the report for failed details and network calls.</li>
+<li>Logs the failure details, including the method name, exception message, and stack trace.</li>
+<li>Logs relevant network call messages.</li>
+<li>Adds the screenshot and the URL before failure to the report.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Handle Skipped Tests</strong>:<ul>
+<li>If the test status is <code>TestStatus.Skipped</code>:<ul>
+<li>Creates a node in the report for skipped details.</li>
+<li>Logs the reason for skipping, including the test name and exception message.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="resetsubsteps">ResetSubsteps</h3>
+<p>Resets or clears the substeps dictionary in the report.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Method Signature</label><label for="__tabbed_7_2">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ResetSubsteps</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Clear Substeps</strong>:<ul>
+<li>Clears the <code>_substepNodes</code> dictionary.</li>
+</ul>
+</li>
+<li><strong>Clear Substep Count</strong>:<ul>
+<li>Clears the <code>_substepCounts</code> dictionary.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="flush">Flush</h3>
+<p>Writes/updates the test information of your reporter to the destination type.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Method Signature</label><label for="__tabbed_8_2">Funtionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Flush</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Flush Report</strong>:<ul>
+<li>Calls <code>_extent.Flush()</code> to write/update the test information of the reporter to the destination type.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="setdriver">SetDriver</h3>
+<p>Sets the driver instance of <code>WebDriver</code> for the current test and add the current driver to the list of drivers in case of multiple driver instances for a single test.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:4"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><input id="__tabbed_9_4" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Method Signature</label><label for="__tabbed_9_2">Parameters</label><label for="__tabbed_9_3">Returns</label><label for="__tabbed_9_4">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">IWebDriver</span><span class="w"> </span><span class="nf">SetDriver</span><span class="p">(</span><span class="n">IWebDriver</span><span class="w"> </span><span class="n">driver</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>driver</code></td>
+<td><code>IWebDriver</code></td>
+<td>The web driver instance to be set.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p><code>IWebDriver</code>: The updated web driver instance.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Set Current Driver</strong>:<ul>
+<li>Assigns the provided <code>driver</code> to the <code>_driver</code> field.</li>
+</ul>
+</li>
+<li><strong>Add to Drivers List</strong>:<ul>
+<li>Adds <code>_driver</code> to the <code>drivers</code> list.</li>
+</ul>
+</li>
+<li><strong>Return Driver</strong>:<ul>
+<li>Returns the updated <code>_driver</code> instance.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="setup">SetUp</h3>
+<p>Uses <code>OneTimeSetUp</code> attribute which runs this method once before all test methods in a test class. And this method adds all the necessary information of the current tests to the report.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Method Signature</label><label for="__tabbed_10_2">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="na">[OneTimeSetUp]</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">protected</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SetUp</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Initialize Web Drivers</strong>:<ul>
+<li>Initializes <code>drivers</code> with a list containing <code>_driver</code>.</li>
+</ul>
+</li>
+<li><strong>Set Trigger Source Information</strong>:<ul>
+<li>Constructs <code>triggerSourceText</code> using the current test name.</li>
+<li>Retrieves <code>triggerSource</code> from the Environment.</li>
+<li>Adds system information to the extent report based on the value of triggerSource:<ul>
+<li>"Manual" if <code>triggerSource</code> is "MANUAL".</li>
+<li>"Hosted Agent Pipeline" if <code>triggerSource</code> is "PIPELINE".</li>
+<li>"Unknown" if <code>triggerSource</code> is null or empty.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Set Test Environment Information</strong>:<ul>
+<li>Adds system information to the extent report about the test environment using <code>Environment.Name</code> and <code>URLs.Instance.Login_URL</code>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="beforetest">BeforeTest</h3>
+<p>Uses <code>OneTimeSetUp</code> attribute which runs this method once before all test methods in a test class. And this method handles the creation of a new test instance in the report along with output to console saying <code>Started Test: &lt;TestMethodName&gt; at &lt;CurrentDateTime&gt;</code> or <code>Retrying Test(s) at &lt;CurrentDateTime&gt;</code></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Method Signature</label><label for="__tabbed_11_2">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="na">[OneTimeSetUp]</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">protected</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">BeforeTest</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Set Test Name</strong>:<ul>
+<li>Creates a new test instance in the report using <code>ExtentTest</code> and sets the test name to the current test method name (unless the test has a TestCaseSourceAttribute, in which case it uses the SetExtentTest method to set a custom name for each test case).</li>
+<li>Logs the start/retry of the test with the test name and start time to the console.</li>
+<li>Assigns the test instance to the <code>_test</code> field.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="aftertest">AfterTest</h3>
+<p>Uses <code>OneTimeTearDown</code> attribute which runs this method once after all test methods in a test class. And this method handles the cleaning up of resources along with output to console saying <code>Ended Test: &lt;TestMethodName&gt; at &lt;CurrentDateTime&gt; with status &lt;TestStatus&gt;, ran for duration : &lt;TestDuration&gt;</code></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Method Signature</label><label for="__tabbed_12_2">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="na">[OneTimeTearDown]</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">protected</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AfterTest</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Get Test Status</strong>:     <ul>
+<li>Retrieves the test status from the <code>TestContext.CurrentContext.Result.Outcome.Status</code> property.</li>
+<li>If the test status is <code>Skipped</code>, logs the test status and duration.</li>
+<li>If the test status is <code>Failed</code>, logs the test status, duration, and exception message.</li>
+<li>If the test status is <code>Passed</code>, logs the test status and duration.</li>
+</ul>
+</li>
+<li><a href="#exportfaileddetails"><strong>Export Failed Details</strong></a>:<ul>
+<li>Exports the failed test details to the report and logs the status accordingly when Test has either <code>Failed</code> or <code>Skipped</code>.</li>
+</ul>
+</li>
+<li><strong>Reset/Clean Up Resources</strong>:<ul>
+<li>Calls <code>ResetSubsteps</code> to clear the substeps dictionary in the current report.</li>
+<li>Calls <code>Flush</code> to write/update the test information of the reporter to the destination type.</li>
+<li>Closes and quits all the driver instances in the current test and clears the list of drivers.</li>
+<li>Clears the list of errors in the <a href="../soft-assertion/"><code>SoftAssertion</code></a> instance.</li>
+<li>Logs the end of the test with the test status, duration, and end time to the console.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="capture">Capture</h3>
+<p>Captures the screenshot of the current page and adds it to the report in base64 format.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:4"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><input id="__tabbed_13_3" name="__tabbed_13" type="radio" /><input id="__tabbed_13_4" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Method Signature</label><label for="__tabbed_13_2">Parameters</label><label for="__tabbed_13_3">Returns</label><label for="__tabbed_13_4">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Capture</span><span class="p">(</span><span class="n">IWebDriver</span><span class="w"> </span><span class="n">driver</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">screenShotName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">today</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>driver</code></td>
+<td><code>IWebDriver</code></td>
+<td>The web driver instance.</td>
+</tr>
+<tr>
+<td><code>screenShotName</code></td>
+<td><code>string</code></td>
+<td>The name of the screenshot.</td>
+</tr>
+<tr>
+<td><code>today</code></td>
+<td><code>string</code></td>
+<td>The current date.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p><code>string</code>: base64 string of the screenshot.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Capture Screenshot</strong>:<ul>
+<li>Captures a screenshot of the current page using <code>driver.TakeScreenshot()</code>.</li>
+</ul>
+</li>
+<li><strong>Save Screenshot</strong>:<ul>
+<li>Saves the screenshot to the <code>Reports</code> folder with a subdirectory from <code>Report today</code> the filename format <code>screenShotName.png</code>.</li>
+</ul>
+</li>
+<li><strong>Return Screenshot Path</strong>:<ul>
+<li>Returns the path of the saved screenshot.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="logreport">LogReport</h3>
+<p>Logs the message to the report with status Pass. Will be deprecated in a future version.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:3"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><input id="__tabbed_14_3" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Method Signature</label><label for="__tabbed_14_2">Parameters</label><label for="__tabbed_14_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">LogReport</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td><code>string</code></td>
+<td>The message to log.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Log Message</strong>:<ul>
+<li>Logs the message to the report with status <code>Pass</code>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="loginfo">LogInfo</h3>
+<p>Logs the message to the report with status Info. Will be deprecated a in a future version.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:3"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Method Signature</label><label for="__tabbed_15_2">Parameters</label><label for="__tabbed_15_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">LogInfo</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td><code>string</code></td>
+<td>The message to log.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Log Message</strong>:<ul>
+<li>Logs the message to the report with status <code>Info</code>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="logerror">LogError</h3>
+<p>Logs the error messages from <a href="../soft-assertion/">SoftAssertion</a> to the console and to the report in a markup helper.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:3"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><input id="__tabbed_16_3" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Method Signature</label><label for="__tabbed_16_2">Parameters</label><label for="__tabbed_16_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">LogError</span><span class="p">(</span><span class="n">ExtentTest</span><span class="w"> </span><span class="n">extentTest</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">errorMessage</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>extentTest</code></td>
+<td><code>ExtentTest</code></td>
+<td>The extent test instance to log the error message.</td>
+</tr>
+<tr>
+<td><code>errorMessage</code></td>
+<td><code>string</code></td>
+<td>The error message to log.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Log Error Message</strong>:<ul>
+<li>Logs the error message to the console using <code>Console.WriteLine</code>.</li>
+</ul>
+</li>
+<li><strong>Log Error to Report</strong>:<ol>
+<li><strong>Markup Helper</strong>:<ul>
+<li>Uses <code>MarkupHelper.CreateCodeBlock</code> to create a code block with the error message(s).</li>
+</ul>
+</li>
+<li><strong>Assertion Failures Node</strong>:<ul>
+<li>Creates a new node in <code>ExtentTest</code> instance with the name "Assertion Failures".</li>
+<li>Attaches the <code>MarkupHelper</code> to the "Assertion Failures" node and shows the failures in <code>Status.Info</code>.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="getorcreatenode">GetOrCreateNode</h3>
+<p>Retrieves an existing <code>ExtentTest</code> node by name or creates a new one as a child of the specified parent node if it does not exist.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:4"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><input id="__tabbed_17_3" name="__tabbed_17" type="radio" /><input id="__tabbed_17_4" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Method Signature</label><label for="__tabbed_17_2">Paramters</label><label for="__tabbed_17_3">Returns</label><label for="__tabbed_17_4">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">ExtentTest</span><span class="w"> </span><span class="nf">GetOrCreateNode</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="n">ExtentTest</span><span class="w"> </span><span class="n">parentNode</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to retrieve or create.</td>
+</tr>
+<tr>
+<td><code>parentNode</code></td>
+<td><code>ExtentTest</code></td>
+<td>The parent node for the new node.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p><code>ExtentTest</code>: The existing or newly created <code>ExtentTest</code> node.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Check for Existing Node</strong>:<ul>
+<li>Checks if <code>_substepNodes</code> contains an entry for <code>nodeName</code>.</li>
+</ul>
+</li>
+<li><strong>Return Existing Node</strong>:<ul>
+<li>If an entry exists, returns the existing <code>ExtentTest</code> node from <code>_substepNodes</code>.</li>
+</ul>
+</li>
+<li><strong>Create New Node</strong>:<ul>
+<li>If no entry exists, creates a new <code>ExtentTest</code> node as a child of <code>parentNode</code> using <code>parentNode.CreateNode(nodeName)</code>.</li>
+<li>Adds the newly created node to <code>_substepNodes</code>.</li>
+</ul>
+</li>
+<li><strong>Return New Node</strong>:<ul>
+<li>Returns the newly created <code>ExtentTest</code> node.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="logsubstep">LogSubstep</h3>
+<p>The <code>LogSubstep</code> method logs details about a substep in a test to the specified node, capturing a screenshot if the substep fails.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:3"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><input id="__tabbed_18_3" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Method Signature</label><label for="__tabbed_18_2">Paramters</label><label for="__tabbed_18_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">LogSubstep</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">stepDetails</span><span class="p">,</span><span class="w"> </span><span class="n">Status</span><span class="w"> </span><span class="n">stepStatus</span><span class="o">?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ssTitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="n">IWebDriver</span><span class="w"> </span><span class="n">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">parentNodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the substep node.</td>
+</tr>
+<tr>
+<td><code>stepDetails</code></td>
+<td><code>string</code></td>
+<td>A description of the substep.</td>
+</tr>
+<tr>
+<td><code>stepStatus</code></td>
+<td><code>Status?</code></td>
+<td>The status of the substep. Default is <code>Status.Pass</code>.</td>
+</tr>
+<tr>
+<td><code>ssTitle</code></td>
+<td><code>string</code></td>
+<td>The title for the screenshot.</td>
+</tr>
+<tr>
+<td><code>driver</code></td>
+<td><code>IWebDriver</code></td>
+<td>The web driver instance. Default is <code>_driver</code>.</td>
+</tr>
+<tr>
+<td><code>parentNodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the parent node. Default is <code>_test</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Node and Parent Node Handling</strong>:<ul>
+<li>Determines the parent node (either <code>_test</code> or <code>parentNodeName</code>).</li>
+<li>Retrieves or creates the substep node (<code>nodeName</code>).</li>
+</ul>
+</li>
+<li><strong>Substep Count Management</strong>:<ul>
+<li>Initializes or increments the substep count for <code>nodeName</code>.</li>
+</ul>
+</li>
+<li><strong>Logging</strong>:<ul>
+<li>Logs the substep details with the status and a step label (e.g., "Step - X: ").</li>
+</ul>
+</li>
+<li><strong>Screenshot Capture</strong>:<ul>
+<li>If the substep status is neither <code>Pass</code> nor <code>Skip</code>, captures a screenshot using <code>driver</code> and adds it to the log entry.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<p>This method provides systematic logging of substeps, ensuring each is recorded with specific details and an optional screenshot on failure.</p>
+<h3 id="getreportpath">GetReportPath</h3>
+<p>The <code>GetReportPath</code> method generates a path for a report to be saved, ensuring necessary directories are created.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:3"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><input id="__tabbed_19_3" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Method Signature</label><label for="__tabbed_19_2">Returns</label><label for="__tabbed_19_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetReportPath</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><code>string</code>: The current report path in the format <code>\\Reports\\Report dd_MM_yyyy\\ExtentReport - d_MMM_yy - H_mm.html</code>.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p><strong>Retrieve Current Directory</strong>:</p>
+<ul>
+<li>Gets the current directory using <code>Directory.GetCurrentDirectory()</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Determine Project Path</strong>:</p>
+<ul>
+<li>Constructs the project path by navigating up three levels from the current directory.</li>
+</ul>
+</li>
+<li>
+<p><strong>Create Report Folder</strong>:</p>
+<ul>
+<li>Constructs the path for the <code>Reports</code> folder and ensures it is created using <code>Directory.CreateDirectory()</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Create Date-Specific Report Folder</strong>:</p>
+<ul>
+<li>Constructs a date-specific folder path within the <code>Reports</code> folder and ensures it is created.</li>
+</ul>
+</li>
+<li>
+<p><strong>Generate Report Path</strong>:</p>
+<ul>
+<li>Constructs the report file path with a timestamp, ensuring it follows the format <code>ExtentReport - d_MMM_yy - H_mm.html</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Return Report Path</strong>:</p>
+<ul>
+<li>Returns the constructed report path.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="assignauthor">AssignAuthor</h3>
+<p>The <code>AssignAuthor</code> method assigns the author name to the current test case.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:3"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><input id="__tabbed_20_3" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">Method Signature</label><label for="__tabbed_20_2">Parameters</label><label for="__tabbed_20_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AssignAuthor</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">authorName</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>authorName</code></td>
+<td><code>string</code></td>
+<td>The author of the current test.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Assign Author</strong>:<ul>
+<li>Assigns the provided author name to the current test using <code>_test.AssignAuthor(authorName)</code>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="switchbrowser">SwitchBrowser</h3>
+<p>The <code>SwitchBrowser</code> method switches the browser window to the specified window handle using webdriver instance in case of multiple webdriver instances.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:3"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><input id="__tabbed_21_3" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Method Signature</label><label for="__tabbed_21_2">Parameters</label><label for="__tabbed_21_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SwitchBrowser</span><span class="p">(</span><span class="n">IWebDriver</span><span class="w"> </span><span class="n">driver</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>driver</code></td>
+<td><code>IWebDriver</code></td>
+<td>The driver to switch to.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Switch Browser</strong>:<ul>
+<li>Uses <code>driver.SwitchTo().Window(driver.CurrentWindowHandle)</code> to switch to the specified browser window.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="getnetworkcalls">GetNetworkCalls</h3>
+<p>The <code>GetNetworkCalls</code> method retrieves and processes browser log entries, logging any failed network calls that meet specific criteria.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:3"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><input id="__tabbed_22_3" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Method Signature</label><label for="__tabbed_22_2">Parameters</label><label for="__tabbed_22_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">protected</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">GetNetworkCalls</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node for logging substeps. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p><strong>Retrieve Browser Logs</strong>:</p>
+<ul>
+<li>Retrieves the browser logs using <code>_driver.Manage().Logs.GetLog(LogType.Browser)</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Process and Filter Logs</strong>:</p>
+<ul>
+<li>Iterates through each log entry.</li>
+<li>Checks if the log message contains the word "Failed" and does not contain "mailhog" or "help.onblick".</li>
+</ul>
+</li>
+<li>
+<p><strong>Log Relevant Entries</strong>:</p>
+<ul>
+<li>If a log entry meets the criteria, writes the error message to <code>TestContext.Progress</code> and logs it as a substep using <code>LogSubstep(nodeName, log.Message, Status.Info)</code>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<p><em>Gets only failed network calls and is invoked when a test has failed.</em></p>
+<h3 id="getallnetworkcalls">GetAllNetworkCalls</h3>
+<p>The <code>GetAllNetworkCalls</code> method retrieves and processes all browser log entries after ensuring there are no pending requests, logging any network calls that meet specific criteria.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:3"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><input id="__tabbed_23_3" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">Method Signature</label><label for="__tabbed_23_2">Parameters</label><label for="__tabbed_23_3">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">protected</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">GetAllNetworkCalls</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node for logging substeps. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p><strong>Wait for No Pending Requests</strong>:</p>
+<ul>
+<li>Calls <code>WaitForNoPendingRequests(_driver, 100)</code> to ensure there are no pending requests.</li>
+</ul>
+</li>
+<li>
+<p><strong>Retrieve Browser Logs</strong>:</p>
+<ul>
+<li>Retrieves the browser logs using <code>_driver.Manage().Logs.GetLog(LogType.Browser)</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Process and Filter Logs</strong>:</p>
+<ul>
+<li>Iterates through each log entry.</li>
+<li>Checks if the log message does not contain "mailhog" or "help.onblick".</li>
+</ul>
+</li>
+<li>
+<p><strong>Log Relevant Entries</strong>:</p>
+<ul>
+<li>If a log entry meets the criteria, writes the error message to <code>TestContext.Progress</code> and logs it as a substep using <code>LogSubstep(nodeName, log.Message)</code>.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<p><em>Note: This method is not used as of now as <code>WaitForNoPendingRequests(_driver,100)</code> doesn't work as expected in onblick application</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
