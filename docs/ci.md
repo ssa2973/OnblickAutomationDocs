@@ -1,6 +1,6 @@
 # Continuous Integration
 
-## Pipelines
+## **Pipelines**
 
 1. This project uses Azure Devops Pipelines for Continuous Integration.
 1. There are multiple pipelines that are used to test in different environments whenever there are new releases. 
@@ -47,7 +47,7 @@
 1. The logs also contain each test step from [`ExecuteStep`](./testexecution-helper.md/#executestep) whenever the current step has started and finished.
 1. All these logs are colored and grouped based on their status and tests so they are easy to read and understand.
 
-## Email Notifications
+## **Email Notifications**
 
 1. The pipelines are configured to send email notifications to the team whenever the pipeline finishes running.
 1. The email notifications are sent to the team members who are part of the teams - `automationteam@onblick.com` and `qateam@onblick.com`.

@@ -1,6 +1,6 @@
 # Setting Up the Environment
 
-## Cloning the Repository
+## **Cloning the Repository**
 Clone the repository (if you have access to it) and navigate to the project's directory. You can clone it in two ways, one using the `git clone` command and the `Visual Studio` interface.
 
 === "Using Visual Studio"
@@ -16,7 +16,7 @@ Clone the repository (if you have access to it) and navigate to the project's di
 
 After you finish cloning, the setup should be complete.
 
-## Changing the environment tests are running on
+## **Changing the environment tests are running on**
 
 In `Environment.cs` you can change the environment the tests are running on. The default environment is `demo`.
 

@@ -1,17 +1,17 @@
 # Using Git
 
-## What is Git?
+## **What is Git?**
 
 Git is a version control system that allows you to track changes in your code. It is a distributed version control system, which means that you can work on your code locally and then push your changes to a remote repository. This is useful for collaboration, as multiple people can work on the same codebase without interfering with each other's work.
 
-## Why use Git?
+## **Why use Git?**
 
 - Keep track of changes in your code.
 - Collaborate with others.
 - Easily revert to previous versions of your code.
 - Keep your code safe and secure.
 
-## How to use Git
+## **How to use Git**
 
 ### Installing Git
 
@@ -37,7 +37,7 @@ Visual Studio 2022 has built-in support for Git, which makes it easy to manage y
 1. You can also configure other settings, such as default location and manage remote branches etc.,
 1. You will have access to almost all git commands in the Visual Studio 2022 UI but you can also use the terminal to run git commands.
 
-## Git Commands
+## **Git Commands**
 
 Here are some common Git commands that you will use when working with Git:
 
@@ -63,7 +63,7 @@ Here are some common Git commands that you will use when working with Git:
 	1. `git pull`: Pulls the changes from the remote repository to the local repository.
 	1. `git clone`: Clones a remote repository to the local machine.
 
-## Git Workflow
+## **Git Workflow**
 
 Here is a typical Git workflow diagram. 
 

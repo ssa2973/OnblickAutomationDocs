@@ -1,15 +1,15 @@
 # SoftAssertion
 
-This class uses `Assert` class from NUnit framework to perform assertions but instead of failing the test immediately, it logs the assertion failures and continues with the test execution. The assertion failures are logged in the test report.
+This class uses `Assert` class from NUnit framework (v3.13) to perform assertions but instead of failing the test immediately, it logs the assertion failures and continues with the test execution. The assertion failures are logged in the test report.
 
-## Normal Assertion
+## **Normal Assertion**
 
 ```csharp
 Assert.AreEqual("Actual", "Expected");
 ```
 This Assertion throws an exception and stops the test execution if the actual and expected values are not equal.
 
-## Assertion using SoftAssert
+## **Assertion using SoftAssert**
 
 Pseudo-code for SoftAssert is as follows:
 
@@ -18,9 +18,11 @@ Assert expected and actual values
 If assertion fails, log the failure to report and continue with the test execution
 ```
 
+---
+
 ## Methods
 
-### AreEqual
+### **AreEqual**
 
 Asserts that two objects are equal. If the assertion fails, logs the failure to the report and continues with the test execution.
 
@@ -47,7 +49,9 @@ Asserts that two objects are equal. If the assertion fails, logs the failure to 
 	- If the assertion fails or passes, logs the failure to the report using [`LogSubstep`](./reports-generation-class.md/#logsubstep) and adds the error to the errors list using [AddErrorMessage](#adderrormessage).
 	- If the assertion fails, adds the error message to the list of errors along with the current stack frame (2-level deep) where the assertion has failed.
 
-### AreNotEqual
+---
+
+### **AreNotEqual**
 
 Asserts that two objects are not equal. If the assertion fails, logs the failure to the report and continues with the test execution.
 
@@ -74,8 +78,9 @@ Asserts that two objects are not equal. If the assertion fails, logs the failure
 	- If the assertion fails or passes, logs the failure to the report using [`LogSubstep`](./reports-generation-class.md/#logsubstep) and adds the error to the errors list using [AddErrorMessage](#adderrormessage).
 	- If the assertion fails, adds the error message to the list of errors along with the current stack frame (2-level deep) where the assertion has failed.
 
+---
 
-### Contains
+### **Contains**
 
 Asserts that a collection contains a specified element. If the assertion fails, logs the failure to the report and continues with the test execution.
 
@@ -102,7 +107,9 @@ Asserts that a collection contains a specified element. If the assertion fails, 
 	- If the assertion fails or passes, logs the failure to the report using [`LogSubstep`](./reports-generation-class.md/#logsubstep) and adds the error to the errors list using [AddErrorMessage](#adderrormessage).
 	- If the assertion fails, adds the error message to the list of errors along with the current stack frame (2-level deep) where the assertion has failed.
 
-### IsTrue
+---
+
+### **IsTrue**
 
 Asserts that a condition is `true`. If the assertion fails, logs the failure to the report and continues with the test execution.
 
@@ -127,7 +134,9 @@ Asserts that a condition is `true`. If the assertion fails, logs the failure to 
 	- If the assertion fails or passes, logs the failure to the report using [`LogSubstep`](./reports-generation-class.md/#logsubstep) and adds the error to the errors list using [AddErrorMessage](#adderrormessage).
 	- If the assertion fails, adds the error message to the list of errors along with the current stack frame (2-level deep) where the assertion has failed.
 
-### IsFalse
+---
+
+### **IsFalse**
 
 Asserts that a condition is `false`. If the assertion fails, logs the failure to the report and continues with the test execution.
 
@@ -153,7 +162,9 @@ Asserts that a condition is `false`. If the assertion fails, logs the failure to
 	- If the assertion fails or passes, logs the failure to the report using [`LogSubstep`](./reports-generation-class.md/#logsubstep) and adds the error to the errors list using [AddErrorMessage](#adderrormessage).
 	- If the assertion fails, adds the error message to the list of errors along with the current stack frame (2-level deep) where the assertion has failed.
 
-### AddErrorMessage
+---
+
+### **AddErrorMessage**
 
 Adds an error message to the list of errors in the `SoftAssertion` instance, along with the current stack frame where the error occurred.
 
@@ -177,7 +188,9 @@ Adds an error message to the list of errors in the `SoftAssertion` instance, alo
 	- **Add Assertion Error Message**:
 		- If `customMessage` is null, empty, or already part of `assertionErrorMessage`, adds the message to the `errors` list in the format: `{assertionErrorMessage} {stackFrameFailedLine}`.
 
-### GetErrors
+---
+
+### **GetErrors**
 
 Returns the list of errors in the `SoftAssertion` instance.
 
@@ -197,7 +210,9 @@ Returns the list of errors in the `SoftAssertion` instance.
 	List<string> errors = assert.GetErrors();
 	```
 
-### GetStackFrameFailedLine
+---
+
+### ***GetStackFrameFailedLine***
 
 Returns the current stack frame information of the failed line.
 
@@ -225,7 +240,9 @@ Returns the current stack frame information of the failed line.
 	string stackFrameFailedLine = GetStackFrameFailedLine();
 	``
 
-### AssertAll
+---
+
+### **AssertAll**
 
 Logs all the errors in the `SoftAssertion` instance to the report and clears the errors list.
 
@@ -256,7 +273,9 @@ Logs all the errors in the `SoftAssertion` instance to the report and clears the
 	- **Clear Errors**:
 		- Clears the errors list.
 
-## Usage of Assertion Methods
+---
+
+## **Usage of Assertion Methods**
 
 An `assert` object for `SoftAssert` class is created in the `ReportsGenerationClass` which will be inherited by `TestExecutionHelper` which in-turn is inherited by all test classes and this `assert` will be used to invoke the `SoftAssert` methods.
 
@@ -316,3 +335,5 @@ An `assert` object for `SoftAssert` class is created in the `ReportsGenerationCl
 		}
 	}
 	```
+
+---

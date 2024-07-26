@@ -8,7 +8,6 @@ The project structure is subject to change, refer to the [latest source](https:/
 ├── README.md
 └── HR Modules
 	├── Common_Modules
-	├── Docs
 	├── Downloads
 	├── Environment_URLs
 	│	├── endpoints-config.json

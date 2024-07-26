@@ -2,7 +2,7 @@
 
 Page Object Model in our current Project follows some guidelines and practices. These guidelines are created to ensure that the project is maintainable, scalable and readable.
 
-## Constructing Locators
+## **Constructing Locators**
 
 Below are the conventions to follow for writing locators in the project:
 
@@ -27,7 +27,7 @@ Below are the conventions to follow for writing locators in the project:
 	// Absolute XPath
 	By.XPath("/html/body/div[1]/div[2]/div[3]/div[4]/input")
 	```
-## Best Practices for Current Project
+## **Best Practices for Current Project**
 
 1. **Use Page Object Model**:
 	- Use Page Object Model to create a separate class for each page.

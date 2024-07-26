@@ -4,7 +4,7 @@ The `WaitHelpers` class provides various methods for waiting for certain conditi
 
 ## Methods
 
-### WaitForElementToBeVisible
+### **WaitForElementToBeVisible**
 
 Waits for an element to be visible on the page.
 
@@ -33,8 +33,9 @@ Waits for an element to be visible on the page.
 	```csharp
 	WaitForElementToBeVisible(driver, By.Id("elementId")); //defaults to 60 seconds
 	```
+---
 
-### WaitForInvisibilityOfElement
+### **WaitForInvisibilityOfElement**
 
 Waits for an element to be invisible on the page.
 
@@ -66,7 +67,9 @@ Waits for an element to be invisible on the page.
 
 _Note:This method will be removed in a future version, use [WaitForInvisibilityOfElements](#waitforinvisibilityofelements) instead_
 
-### WaitForElementToBeClickable
+---
+
+### **WaitForElementToBeClickable**
 
 Waits for an element to be clickable (checks if element is enabled) on the page.
 
@@ -96,7 +99,9 @@ Waits for an element to be clickable (checks if element is enabled) on the page.
 	WaitForElementToBeClickable(driver, By.Id("elementId")); //defaults to 60 seconds
 	```
 
-### WaitForElementToExist
+---
+
+### **WaitForElementToExist**
 
 Waits for an element to exist on the page.
 
@@ -126,7 +131,9 @@ Waits for an element to exist on the page.
 	WaitForElementToExist(driver, By.Id("elementId")); //defaults to 60 seconds
 	```
 
-### WaitForInvisibilityOfElements
+---
+
+### **WaitForInvisibilityOfElements**
 
 Waits for all elements matching the locator to be invisible on the page.
 
@@ -156,7 +163,9 @@ Waits for all elements matching the locator to be invisible on the page.
 	WaitForInvisibilityOfElements(driver, By.ClassName("elementClass")); //defaults to 80 seconds
 	```
 
-### WaitForUrlToContain
+---
+
+### **WaitForUrlToContain**
 
 Waits for the URL to contain the specified string.
 
@@ -186,7 +195,9 @@ Waits for the URL to contain the specified string.
 	WaitForUrlToContain(driver, "example.com"); //defaults to 60 seconds
 	```
 
-### WaitForNewTab
+---
+
+### **WaitForNewTab**
 
 Waits for a new tab to be opened.
 
@@ -216,7 +227,9 @@ Waits for a new tab to be opened.
 	WaitForNewTab(driver, 1); //defaults to 60 seconds
 	```
 
-### WaitForTabClose
+---
+
+### **WaitForTabClose**
 
 Waits for a tab to be closed.
 
@@ -247,7 +260,9 @@ Waits for a tab to be closed.
 	WaitForTabClose(driver, 2); //defaults to 60 seconds
 	```
 
-### WaitForFileDownload
+---
+
+### **WaitForFileDownload**
 
 Waits for a file to be downloaded.
 
@@ -279,7 +294,9 @@ Waits for a file to be downloaded.
 	WaitForFileDownload(driver, "C:\\Downloads", 0); //defaults to 60 seconds
 	```
 
-### WaitForAnyElementToBeVisible
+---
+
+### **WaitForAnyElementToBeVisible**
 
 Waits for any elements identified with the given locator to be visible on the page.
 _Note: Used only when there are multiple matching elements with the given locator, and we have to wait for an element whose index isn't 1 to be visible._
@@ -311,7 +328,9 @@ _Note: Used only when there are multiple matching elements with the given locato
 	WaitForAnyElementToBeVisible(driver, By.ClassName("elementClass")); //defaults to 60 seconds
 	```
 
-### WaitForNoPendingRequests
+---
+
+### ***WaitForNoPendingRequests***
 
 Waits for all pending network requests to complete.
 
@@ -335,3 +354,5 @@ Waits for all pending network requests to complete.
 	WaitForNoPendingRequests(driver, 60);
 	```
 _Note: This method doesn't work in [Onblick2.0](https://www.onblick.com){:target=_blank} as there are always pending signalr calls, so it is unused for now._
+
+---

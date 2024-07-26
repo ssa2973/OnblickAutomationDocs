@@ -2,7 +2,7 @@
 
 Now that you've written your first test, let's run it. There are a couple ways you can run your test, one is using the `dotnet test` command in the CLI, and the other is using the Test Explorer in Visual Studio.
 
-## How to Run Tests
+## **How to Run Tests**
 
 === "Using Test Explorer"
 	1. Open the Test Explorer by going to `Test` > `Test Explorer` in the top menu.
@@ -25,7 +25,7 @@ Now that you've written your first test, let's run it. There are a couple ways y
 	dotnet test --filter FullyQualifiedName~MyNamespace.MyTest
 	```
 
-## Viewing Test Results
+## **Viewing Test Results**
 
 - When you run your tests, you will see the output in the Test Explorer or in the CLI. The output will show you the status of each test, whether it passed or failed, and the time it took to run the test.
 

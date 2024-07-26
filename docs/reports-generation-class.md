@@ -6,7 +6,7 @@ Below are the methods in the `ReportsGenerationClass` used to generate the repor
 
 ## Members
 
-### SetExtentTest
+### **SetExtentTest**
 
 Sets the name for the current test instance - `ExtentTest` in the current `ExtentReport` instance.
 
@@ -26,7 +26,9 @@ Sets the name for the current test instance - `ExtentTest` in the current `Exten
 	1. **Set Test Name**:
 		- Sets the name of the current test instance in the report to the provided `name`.
 
-### GetExtentTest
+---
+
+### **GetExtentTest**
 
 Returns the instance of the `ExtentTest`.
 
@@ -44,7 +46,10 @@ Returns the instance of the `ExtentTest`.
 	1. **Return Test Instance**:
 		- Returns the `_test` field, which is an instance of `ExtentTest`.
 
-### GetExtentReport
+
+---
+
+### **GetExtentReport**
 
 Returns the instance of the `ExtentReport`.
 
@@ -62,7 +67,9 @@ Returns the instance of the `ExtentReport`.
 	1. **Return Report Instance**:
 		- Returns the `_extent` field, which is an instance of `ExtentReports`.
 
-### GetDrivers
+---
+
+### **GetDrivers**
 
 Returns the list of driver instances of `WebDriver` for the current test.
 
@@ -80,7 +87,9 @@ Returns the list of driver instances of `WebDriver` for the current test.
 	1. **Return Drivers List**:
 		- Returns the `drivers` list, which contains instances of `IWebDriver`.
 
-### GetMethodByName
+---
+
+### **GetMethodByName**
 
 Gets a `MethodInfo` instance of the method by its name. Used in [BeforeTest](#beforetest) when the test method has a `TestCaseSourceAttribute`
 
@@ -111,7 +120,9 @@ Gets a `MethodInfo` instance of the method by its name. Used in [BeforeTest](#be
 	1. Return Null if Not Found:
 		- If no method with the specified name is found, returns `null`.
 
-### ExportFailedDetails
+---
+
+### **ExportFailedDetails**
 
 Exports the failed test details to the report and log the status accordingly when the test either fails or is skipped.
 
@@ -137,7 +148,9 @@ Exports the failed test details to the report and log the status accordingly whe
 			- Creates a node in the report for skipped details.
 			- Logs the reason for skipping, including the test name and exception message.
 
-### ResetSubsteps
+---
+
+### **ResetSubsteps**
 
 Resets or clears the substeps dictionary in the report.
 
@@ -153,7 +166,9 @@ Resets or clears the substeps dictionary in the report.
 	1. **Clear Substep Count**:
 		- Clears the `_substepCounts` dictionary.
 
-### Flush
+---
+
+### **Flush**
 
 Writes/updates the test information of your reporter to the destination type.
 
@@ -167,7 +182,9 @@ Writes/updates the test information of your reporter to the destination type.
 	1. **Flush Report**:
 		- Calls `_extent.Flush()` to write/update the test information of the reporter to the destination type.
 
-### SetDriver
+---
+
+### **SetDriver**
 
 Sets the driver instance of `WebDriver` for the current test and add the current driver to the list of drivers in case of multiple driver instances for a single test.
 
@@ -195,7 +212,9 @@ Sets the driver instance of `WebDriver` for the current test and add the current
 	1. **Return Driver**:
 		- Returns the updated `_driver` instance.
 
-### SetUp
+---
+
+### ***SetUp***
 
 Uses `OneTimeSetUp` attribute which runs this method once before all test methods in a test class. And this method adds all the necessary information of the current tests to the report.
 
@@ -219,7 +238,9 @@ Uses `OneTimeSetUp` attribute which runs this method once before all test method
 	1. **Set Test Environment Information**:
 		- Adds system information to the extent report about the test environment using `Environment.Name` and `URLs.Instance.Login_URL`.
 
-### BeforeTest
+---
+
+### ***BeforeTest***
 
 Uses `OneTimeSetUp` attribute which runs this method once before all test methods in a test class. And this method handles the creation of a new test instance in the report along with output to console saying `Started Test: <TestMethodName> at <CurrentDateTime>` or `Retrying Test(s) at <CurrentDateTime>`
 
@@ -237,7 +258,9 @@ Uses `OneTimeSetUp` attribute which runs this method once before all test method
 		- Logs the start/retry of the test with the test name and start time to the console.
 		- Assigns the test instance to the `_test` field.
 
-### AfterTest
+---
+
+### ***AfterTest***
 
 Uses `OneTimeTearDown` attribute which runs this method once after all test methods in a test class. And this method handles the cleaning up of resources along with output to console saying `Ended Test: <TestMethodName> at <CurrentDateTime> with status <TestStatus>, ran for duration : <TestDuration>`
 
@@ -264,7 +287,9 @@ Uses `OneTimeTearDown` attribute which runs this method once after all test meth
 		- Clears the list of errors in the [`SoftAssertion`](./soft-assertion.md) instance.
 		- Logs the end of the test with the test status, duration, and end time to the console.
 
-### Capture
+---
+
+### **Capture**
 
 Captures the screenshot of the current page and adds it to the report in base64 format.
 
@@ -294,7 +319,9 @@ Captures the screenshot of the current page and adds it to the report in base64 
 	1. **Return Screenshot Path**:
 		- Returns the path of the saved screenshot.
 
-### LogReport
+---
+
+### **LogReport**
 
 Logs the message to the report with status Pass. Will be deprecated in a future version.
 
@@ -314,8 +341,9 @@ Logs the message to the report with status Pass. Will be deprecated in a future 
 	1. **Log Message**:
 		- Logs the message to the report with status `Pass`.
 
+---
 
-### LogInfo
+### **LogInfo**
 
 Logs the message to the report with status Info. Will be deprecated a in a future version.
 
@@ -336,8 +364,9 @@ Logs the message to the report with status Info. Will be deprecated a in a futur
 	1. **Log Message**:
 		- Logs the message to the report with status `Info`.
 
+---
 
-### LogError
+### **LogError**
 
 Logs the error messages from [SoftAssertion](./soft-assertion.md) to the console and to the report in a markup helper.
 
@@ -364,7 +393,9 @@ Logs the error messages from [SoftAssertion](./soft-assertion.md) to the console
 			- Creates a new node in `ExtentTest` instance with the name "Assertion Failures".
 			- Attaches the `MarkupHelper` to the "Assertion Failures" node and shows the failures in `Status.Info`.
 
-### GetOrCreateNode
+---
+
+### ***GetOrCreateNode***
 
 Retrieves an existing `ExtentTest` node by name or creates a new one as a child of the specified parent node if it does not exist.
 
@@ -396,7 +427,9 @@ Retrieves an existing `ExtentTest` node by name or creates a new one as a child 
 	1. **Return New Node**:
 		- Returns the newly created `ExtentTest` node.
 
-### LogSubstep
+---
+
+### **LogSubstep**
 
 The `LogSubstep` method logs details about a substep in a test to the specified node, capturing a screenshot if the substep fails.
 
@@ -430,7 +463,9 @@ The `LogSubstep` method logs details about a substep in a test to the specified 
 
 This method provides systematic logging of substeps, ensuring each is recorded with specific details and an optional screenshot on failure.
 
-### GetReportPath
+---
+
+### **GetReportPath**
 
 The `GetReportPath` method generates a path for a report to be saved, ensuring necessary directories are created.
 
@@ -463,7 +498,9 @@ The `GetReportPath` method generates a path for a report to be saved, ensuring n
 	1. **Return Report Path**:
 		- Returns the constructed report path.
 
-### AssignAuthor
+---
+
+### **AssignAuthor**
 
 The `AssignAuthor` method assigns the author name to the current test case.
 
@@ -483,7 +520,9 @@ The `AssignAuthor` method assigns the author name to the current test case.
 	1. **Assign Author**:
 		- Assigns the provided author name to the current test using `_test.AssignAuthor(authorName)`.
 
-### SwitchBrowser
+---
+
+### **SwitchBrowser**
 
 The `SwitchBrowser` method switches the browser window to the specified window handle using webdriver instance in case of multiple webdriver instances.
 
@@ -503,7 +542,9 @@ The `SwitchBrowser` method switches the browser window to the specified window h
 	1. **Switch Browser**:
 		- Uses `driver.SwitchTo().Window(driver.CurrentWindowHandle)` to switch to the specified browser window.
 
-### GetNetworkCalls
+---
+
+### **GetNetworkCalls**
 
 The `GetNetworkCalls` method retrieves and processes browser log entries, logging any failed network calls that meet specific criteria.
 
@@ -532,7 +573,9 @@ The `GetNetworkCalls` method retrieves and processes browser log entries, loggin
 
 _Gets only failed network calls and is invoked when a test has failed._
 
-### GetAllNetworkCalls
+---
+
+### **GetAllNetworkCalls**
 
 The `GetAllNetworkCalls` method retrieves and processes all browser log entries after ensuring there are no pending requests, logging any network calls that meet specific criteria.
 
@@ -563,3 +606,5 @@ The `GetAllNetworkCalls` method retrieves and processes all browser log entries 
 		- If a log entry meets the criteria, writes the error message to `TestContext.Progress` and logs it as a substep using `LogSubstep(nodeName, log.Message)`.
 
 _Note: This method is not used as of now as `WaitForNoPendingRequests(_driver,100)` doesn't work as expected in onblick application_
+
+---

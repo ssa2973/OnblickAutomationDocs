@@ -15,6 +15,10 @@ theme:
   name: material
   favicon: assets/images/favicon.png
   features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.prefetch
+    - navigation.top
     - content.code.copy
     - content.code.select
   palette:
@@ -30,7 +34,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
+      primary: light blue
       accent: amber
       toggle:
         icon: material/toggle-switch-off-outline
@@ -42,6 +46,7 @@ nav:
   - Prerequisites: prerequisites.md
   - Project Structure: project-structure.md
   - Setting Up the Environment: setting-up.md
+  - Building the solution: build.md
   - Writing Your First Test: first-test.md
   - Running Tests: running-tests.md
   - Understanding Pre-defined Utilities and Classes: 
@@ -55,7 +60,9 @@ nav:
     - TestExecutionHelper: testexecution-helper.md
     - URLs: urls.md
     - WaitHelpers: wait-helpers.md
-    - WebElementExtensions: webelement-extensions.md
+    - WebExtensions: 
+        - WebDriverExtensions: webdriver-extensions.md
+        - WebElementExtensions: webelement-extensions.md
   - Page Object Model (POM):
     - Introduction: pom-introduction.md
     - Guidelines: pom-guidelines.md

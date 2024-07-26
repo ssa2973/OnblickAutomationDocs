@@ -4,15 +4,74 @@
 
 ## Methods
 
-Below are the extension methods available in `WebElementExtensions`:
+There are some private methods (italicized headings) used in the extension methods and all the public methods are extension methods available in `WebElementExtensions`:
 
-### IClick
+### Private Methods
+
+#### ***GetDriverFromElement***
+
+The `GetDriverFromElement` method is a private method used in almost all the methods in this class to get the WebDriver instance from an IWebElement object.
+
+=== "Method Signature"
+	```csharp
+	private static IWebDriver GetDriverFromElement(this IWebElement element)
+	```
+
+=== "Parameters"
+	
+	| Name | Type | Description |
+	| ---- | ---- | ----------- |
+	| `element` | IWebElement | The element to get the driver from. |
+
+=== "Return Value"
+
+	The method returns the WebDriver instance associated with the element.
+
+---
+
+#### ***GetInterceptingElement*** 
+
+`GetInterceptingElement` is a private method used in [`IClick`](#iclick) which extracts the identifier of the element that is intercepting the click from an exception message.
+
+=== "Method Signature"
+	```csharp
+	private static string GetInterceptingElement(Exception ex)
+	```
+=== "Parameters"
+
+	| Name | Type | Description |
+	| ---- | ---- | ----------- |
+	| `ex` | Exception | The exception thrown when the click is intercepted. |
+
+=== "Return Value"
+
+	The method returns the identifier of the element that is intercepting the click.
+
+---
+
+#### ***MoveInterceptingElement***
+
+The `MoveInterceptingElement` method is an extension method that moves an intercepting element out of the way. It is used in the [`IClick`](#iclick) method to move draggable elements that are obstructing the click.
+
+=== "Method Signature"
+	```csharp
+	private static void MoveInterceptingElement(this IWebElement interceptingElement, IWebDriver driver)
+	```
+=== "Parameters"
+
+	| Name | Type | Description |
+	| ---- | ---- | ----------- |
+	| `interceptingElement` | IWebElement | The element that is obstructing the click. |
+
+----
+
+### **IClick**
 
 The `IClick` method is an extension method that clicks on an element. It is equivalent to calling the `Click` method on an IWebElement object. `IClick` - **Interception Click** handler that manages intercepted exceptions.
 
 === "Method Signature"
 	```csharp
-	public static void IClick(this IWebElement element, IWebDriver driver)
+	public static void IClick(this IWebElement element)
 	```
 
 === "Parameters"
@@ -20,7 +79,6 @@ The `IClick` method is an extension method that clicks on an element. It is equi
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The element to click on. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 
 === "Functionality"
 
@@ -40,43 +98,12 @@ The `IClick` method is an extension method that clicks on an element. It is equi
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.IClick(driver);
+	element.IClick();
 	```
 
-##### GetInterceptingElement 
+---
 
-`GetInterceptingElement` is a private method used in [`IClick`](#iclick) which extracts the identifier of the element that is intercepting the click from an exception message.
-
-=== "Method Signature"
-	```csharp
-	private static string GetInterceptingElement(Exception ex)
-	```
-=== "Parameters"
-
-	| Name | Type | Description |
-	| ---- | ---- | ----------- |
-	| `ex` | Exception | The exception thrown when the click is intercepted. |
-
-=== "Return Value"
-
-	The method returns the identifier of the element that is intercepting the click.
-
-##### MoveInterceptingElement
-
-The `MoveInterceptingElement` method is an extension method that moves an intercepting element out of the way. It is used in the [`IClick`](#iclick) method to move draggable elements that are obstructing the click.
-
-=== "Method Signature"
-	```csharp
-	private static void MoveInterceptingElement(this IWebElement interceptingElement, IWebDriver driver)
-	```
-=== "Parameters"
-
-	| Name | Type | Description |
-	| ---- | ---- | ----------- |
-	| `interceptingElement` | IWebElement | The element that is obstructing the click. |
-	| `driver` | IWebDriver | The WebDriver instance. |
-
-### ScrollToTheLeft
+### **ScrollToTheLeft**
 
 The `ScrollToTheLeft` method is used to scroll to the leftmost of the page within the scrollable element on the webpage.
 
@@ -90,21 +117,22 @@ The `ScrollToTheLeft` method is used to scroll to the leftmost of the page withi
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The element to scroll. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.ScrollToTheLeft(driver);
+	element.ScrollToTheLeft();
 	```
 
-### ScrollToTheRight
+---
+
+### **ScrollToTheRight**
 
 The `ScrollToTheRight` method is used to scroll to the rightmost of the page within the scrollable element on the webpage.
 
 === "Method Signature"
 	```csharp
-	public static void ScrollToTheRight(this IWebElement element, IWebDriver driver)
+	public static void ScrollToTheRight(this IWebElement element)
 	```
 
 === "Parameters"
@@ -112,16 +140,17 @@ The `ScrollToTheRight` method is used to scroll to the rightmost of the page wit
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The element to scroll. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 
 
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.ScrollToTheRight(driver);
+	element.ScrollToTheRight();
 	```
 
-### IGetHexColor
+---
+
+### **IGetHexColor**
 
 The `IGetHexColor` method is an extension method that retrieves the hex color of the element. It is equivalent to calling the `GetCssValue` method on an IWebElement object. It has two overload methods, one that returns the hex color as a string and another that validates the hex color with an expected value.
 
@@ -162,13 +191,15 @@ The `IGetHexColor` method is an extension method that retrieves the hex color of
 	element.IGetHexColor("color", "#000000");
 	```
 
-### Highlight
+---
+
+### **Highlight**
 
 The `Highlight` method is an extension method that highlights an element on the page. It is used to visually identify the element on the page.
 
 === "Method Signature"
 	```csharp
-	public static void Highlight(this IWebElement element, IWebDriver driver)
+	public static void Highlight(this IWebElement element)
 	```
 
 === "Parameters"
@@ -176,7 +207,6 @@ The `Highlight` method is an extension method that highlights an element on the 
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The element to highlight. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 
 === "Functionality"
 
@@ -186,16 +216,18 @@ The `Highlight` method is an extension method that highlights an element on the 
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.Highlight(driver);
+	element.Highlight();
 	```
 
-### Unhighlight
+---
+
+### **Unhighlight**
 
 The `Unhighlight` method is an extension method that removes the highlight from an element on the page. It is used to remove the visual identification of the element.
 
 === "Method Signature"
 	```csharp
-	public static void Unhighlight(this IWebElement element, IWebDriver driver)
+	public static void Unhighlight(this IWebElement element)
 	```
 
 === "Parameters"
@@ -203,7 +235,6 @@ The `Unhighlight` method is an extension method that removes the highlight from 
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The element to unhighlight. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 
 === "Functionality"
 
@@ -213,16 +244,18 @@ The `Unhighlight` method is an extension method that removes the highlight from 
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.Unhighlight(driver);
+	element.Unhighlight();
 	```
 
-### ScrollTo
+---
+
+### **ScrollTo**
 
 The `ScrollTo` method is an extension method that scrolls to an element on the page. It is used to bring the element into view.
 
 === "Method Signature"
 	```csharp
-	public static void ScrollTo(this IWebElement element, IWebDriver driver)
+	public static void ScrollTo(this IWebElement element)
 	```
 
 === "Parameters"
@@ -230,7 +263,6 @@ The `ScrollTo` method is an extension method that scrolls to an element on the p
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The element to scroll to. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 
 === "Functionality"
 
@@ -241,16 +273,18 @@ The `ScrollTo` method is an extension method that scrolls to an element on the p
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.ScrollTo(driver);
+	element.ScrollTo();
 	```
 
-### Scroll
+---
+
+### **Scroll**
 
 The `Scroll` method is an extension method that scrolls the page by a specified number of pixels. It is used to scroll the page up or down by a specific amount.
 
 === "Method Signature"
 	```csharp
-	public static void Scroll(this IWebElement element, IWebDriver driver, string direction, int distance)
+	public static void Scroll(this IWebElement element, string direction, int distance)
 	```
 
 === "Parameters"
@@ -258,7 +292,6 @@ The `Scroll` method is an extension method that scrolls the page by a specified 
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The element to scroll. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 	| `direction` | string | The direction to scroll in (`up` or `down`). |
 	| `distance` | int | The number of pixels to scroll by. |
 
@@ -271,22 +304,24 @@ The `Scroll` method is an extension method that scrolls the page by a specified 
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.Scroll(driver, "down", 500);
+	element.Scroll("down", 500);
 	```
 
 === "Example 2"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.Scroll(driver, "up", 500);
+	element.Scroll("up", 500);
 	```
 
-### DateEntry
+---
+
+### **DateEntry**
 
 The `DateEntry` method is an extension method that enters a date into a date picker element. It is used to automate the entry of dates into date picker elements.
 
 === "Method Signature"
 	```csharp
-	public static void DateEntry(this IWebElement element, IWebDriver driver, string date)
+	public static void DateEntry(this IWebElement element, string date)
 	```
 
 === "Parameters"
@@ -294,7 +329,6 @@ The `DateEntry` method is an extension method that enters a date into a date pic
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The date picker element. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 	| `date` | string | The date to enter in the format `MM/dd/yyyy`. |
 
 === "Functionality"
@@ -306,16 +340,18 @@ The `DateEntry` method is an extension method that enters a date into a date pic
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.DateEntry(driver, "12/31/2022");
+	element.DateEntry("12/31/2022");
 	```
 
-### ClearAndEnter
+---
+
+### **ClearAndEnter**
 
 The `ClearAndEnter` method is an extension method that clears the existing text in an input field and enters new text. It is used to automate the clearing and entering of text into input fields.
 
 === "Method Signature"
 	```csharp
-	public static void ClearAndEnter(this IWebElement element, IWebDriver driver, string text)
+	public static void ClearAndEnter(this IWebElement element, string text)
 	```
 
 === "Parameters"
@@ -323,7 +359,6 @@ The `ClearAndEnter` method is an extension method that clears the existing text 
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The input field element. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 	| `text` | string | The text to enter into the input field. |
 
 === "Functionality"
@@ -334,16 +369,18 @@ The `ClearAndEnter` method is an extension method that clears the existing text 
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.ClearAndEnter(driver, "Text to enter");
+	element.ClearAndEnter("Text to enter");
 	```
 
-### ClickLeft
+---
+
+### **ClickLeft**
 
 The `ClickLeft` method is an extension method that clicks on the left side of an element. It is used to simulate a click on the left side of an element.
 
 === "Method Signature"
 	```csharp
-	public static void ClickLeft(this IWebElement element, IWebDriver driver, int percentage)
+	public static void ClickLeft(this IWebElement element, int percentage)
 	```
 
 === "Parameters"
@@ -351,7 +388,6 @@ The `ClickLeft` method is an extension method that clicks on the left side of an
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The element to click on. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 	| `percentage` | int | The percentage of the element's width to click on. |
 
 === "Functionality"
@@ -363,16 +399,18 @@ The `ClickLeft` method is an extension method that clicks on the left side of an
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.ClickLeft(driver, 20);
+	element.ClickLeft(20);
 	```
 
-### Hover
+---
+
+### **Hover**
 
 The `Hover` method is an extension method that hovers over an element. It is used to simulate a mouse hover action on an element.
 
 === "Method Signature"
 	```csharp
-	public static void Hover(this IWebElement element, IWebDriver driver)
+	public static void Hover(this IWebElement element)
 	```
 
 === "Parameters"
@@ -380,7 +418,6 @@ The `Hover` method is an extension method that hovers over an element. It is use
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The element to hover over. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 
 === "Functionality"
 
@@ -390,16 +427,18 @@ The `Hover` method is an extension method that hovers over an element. It is use
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.Hover(driver);
+	element.Hover();
 	```
 
-### CtrlClick
+---
+
+### **CtrlClick**
 
 The `CtrlClick` method is an extension method that performs a Ctrl+Click action on an element. It is used to simulate a Ctrl+Click action on an element which opens the hyperlink of an element in a new tab.
 
 === "Method Signature"
 	```csharp
-	public static void CtrlClick(this IWebElement element, IWebDriver driver)
+	public static void CtrlClick(this IWebElement element)
 	```
 
 === "Parameters"
@@ -407,7 +446,6 @@ The `CtrlClick` method is an extension method that performs a Ctrl+Click action 
 	| Name | Type | Description |
 	| ---- | ---- | ----------- |
 	| `element` | IWebElement | The element to Ctrl+Click on. |
-	| `driver` | IWebDriver | The WebDriver instance. |
 
 === "Functionality"
 
@@ -418,86 +456,7 @@ The `CtrlClick` method is an extension method that performs a Ctrl+Click action 
 === "Usage"
 	```csharp
 	IWebElement element = driver.FindElement(By.Id("elementId"));
-	element.CtrlClick(driver);
+	element.CtrlClick();
 	```
 
-### OpenNewTab
-
-The `OpenNewTab` method is an extension method that opens a new tab.
-
-=== "Method Signature"
-	```csharp
-	public static void OpenNewTab(this IWebDriver driver)
-	```
-
-=== "Parameters"
-
-	| Name | Type | Description |
-	| ---- | ---- | ----------- |
-	| `driver` | IWebDriver | The WebDriver instance. |
-
-=== "Functionality"
-
-	1. **JavaScript Execution**: Executes a JavaScript script to open a new tab.
-	1. **New Tab**: Opens a new tab in the browser.
-
-=== "Usage"
-	```csharp
-	driver.OpenNewTab();
-	```
-
-### SetZoomLevel
-
-The `SetZoomLevel` method is an extension method that sets the zoom level of the browser.
-
-=== "Method Signature"
-	```csharp
-	public static void SetZoomLevel(this IWebDriver driver, int zoomPercent)
-	```
-
-=== "Parameters"
-
-	| Name | Type | Description |
-	| ---- | ---- | ----------- |
-	| `driver` | IWebDriver | The WebDriver instance. |
-	| `zoomPercent` | int | The zoom level percentage. |
-
-=== "Functionality"
-
-	1. **JavaScript Execution**: Executes a JavaScript script to set the zoom level.
-	1. **Zoom Level**: Sets the zoom level of the browser to the specified percentage.
-	1. **Zoom In/Out**: Increases or decreases the zoom level.
-
-
-=== "Usage"
-	```csharp
-	driver.SetZoomLevel(150);
-	```
-_Note: Refrain from using this method for now as it's still a bit undeveloped._
-
-### ClickByOffSetFromViewport
-
-The `ClickByOffSetFromViewport` method is an extension method that clicks on the webpage by providing the offset from the viewport.
-
-=== "Method Signature"
-	```csharp
-	public static void ClickByOffSetFromViewport(this IWebDriver driver, Point point)
-	```
-
-=== "Parameters"
-
-	| Name | Type | Description |
-	| ---- | ---- | ----------- |
-	| `driver` | IWebDriver | The WebDriver instance. |
-	| `point` | Point | The offset from the viewport. |
-
-=== "Functionality"
-
-	1. **JavaScript Execution**: Executes a JavaScript script to click on the webpage.
-	1. **Offset**: Clicks on the webpage at the specified offset from the viewport.
-
-=== "Usage"
-	```csharp
-	driver.ClickByOffSetFromViewport(new Point(100, 100));
-	```
-_Note: Refrain from using this method for now as it's still a bit undeveloped._
+---
