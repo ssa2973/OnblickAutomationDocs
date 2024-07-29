@@ -67,6 +67,7 @@ nav:
     - Introduction: pom-introduction.md
     - Guidelines: pom-guidelines.md
   - Debugging: debugging.md
+  - Working with System Files: system-files.md
   - Reports: reports.md
   - Continuous Integration: ci.md
   - Best Practices: best-practices.md
