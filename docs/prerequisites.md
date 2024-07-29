@@ -9,6 +9,7 @@ Before starting, ensure you have the following:
 #### [Git](https://git-scm.com/downloads){:target='_blank'}
 - You can verify the installation by running `git --version` in your terminal to ensure it outputs a version number.
 - You can use the command line or a GUI like [GitHub Desktop](https://desktop.github.com/){:target=_blank} or use the integrated git support in Visual Studio 2022.
+- For more information on using Git, see [using git](./git.md) section or refer to the [official documentation](https://git-scm.com/doc){:target='_blank}.
 #### Others
 - Basic knowledge of C#
 - NuGet packages for Selenium WebDriver and NUnit
