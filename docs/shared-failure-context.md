@@ -8,6 +8,8 @@ Below are the methods in `SharedFailureContext`:
 
 ### **InitializeExceptionDetails**
 
+---
+
 Intializes the exception details in the shared failure context. It is used in [`ExecuteStep`](./testexecution-helper.md/#executestep) method in the catch block to initialize exception details after an exception was thrown.
 
 === "Method Signature"
@@ -38,9 +40,9 @@ Intializes the exception details in the shared failure context. It is used in [`
 	SharedFailureContext.InitializeExceptionDetails(ex);
 	```
 
----
-
 ### **ResetExceptionDetails**
+
+---
 
 Resets the exception details in the shared failure context. It is used in [`ExecuteStepAndSuppress`](./testexecution-helper.md/#executestepandsuppress) method in the finally block to reset exception details after the step has been executed.
 
@@ -65,9 +67,9 @@ Resets the exception details in the shared failure context. It is used in [`Exec
 	SharedFailureContext.ResetExceptionDetails();
 	```
 
----
-
 ### **GetStacktraceFailedLines**
+
+---
 
 Processes the stack trace of the exception to extract the failed lines. It is used in the [`InitializeExceptionDetails`](#initializeexceptiondetails) method.
 
@@ -109,5 +111,3 @@ Processes the stack trace of the exception to extract the failed lines. It is us
 	```csharp
 	StackTrace = SharedFailureContext.GetStacktraceFailedLines(stackTrace);
 	```
-
----

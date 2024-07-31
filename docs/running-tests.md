@@ -4,6 +4,8 @@ Now that you've written your first test, let's run it. There are a couple ways y
 
 ## **How to Run Tests**
 
+---
+
 === "Using Test Explorer"
 	1. Open the Test Explorer by going to `Test` > `Test Explorer` in the top menu.
 	1. Click on the `Run All` button to run all the tests in the project.
@@ -26,6 +28,8 @@ Now that you've written your first test, let's run it. There are a couple ways y
 	```
 
 ## **Viewing Test Results**
+
+---
 
 - When you run your tests, you will see the output in the Test Explorer or in the CLI. The output will show you the status of each test, whether it passed or failed, and the time it took to run the test.
 

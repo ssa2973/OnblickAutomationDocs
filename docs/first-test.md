@@ -2,6 +2,8 @@
 
 ## **First Test**
 
+---
+
 Now that we have our project set up, let's write our first test. We'll write a test that verifies that the Login function `LoginPage.ValidLogin()` works correctly. We'll write this test in a new file called `LoginTest.cs` in the `Test Plans` directory.
 
 ```csharp
@@ -52,6 +54,8 @@ Click the login button
 ```
 
 ## **Real-time Example for New Test**
+
+---
 
 - First, create a new file in each Test Plans, Test Data, Page Object folders respectively
 - Create a new test in the Test Plans folder corresponding to your current Test, let's name it `MyFirstTest.cs`.
@@ -169,5 +173,7 @@ Click the login button
 	```
 
 ## **Build and Resolve any errors**
+
+---
 
 After writing your test, [`build the solution`](./build.md) to ensure that there are no errors. If there are any errors, review the error messages and resolve them before proceeding. Once the build is successful, the project is ready for execution.

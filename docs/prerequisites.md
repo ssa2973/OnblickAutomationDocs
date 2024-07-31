@@ -11,5 +11,5 @@ Before starting, ensure you have the following:
 - You can use the command line or a GUI like [GitHub Desktop](https://desktop.github.com/){:target=_blank} or use the integrated git support in Visual Studio 2022.
 - For more information on using Git, see [using git](./git.md) section or refer to the [official documentation](https://git-scm.com/doc){:target='_blank}.
 #### Others
-- Basic knowledge of C#
-- NuGet packages for Selenium WebDriver and NUnit
+- Basic knowledge of C#, refer to this [C# Programming Guide](https://docs.microsoft.com/en-us/dotnet/csharp/){:target='_blank'} if needed.
+- NuGet packages for Selenium WebDriver and NUnit (included in the project).

@@ -66,6 +66,15 @@ nav:
   - Page Object Model (POM):
     - Introduction: pom-introduction.md
     - Guidelines: pom-guidelines.md
+    - Frequently Utilized POM Classes:
+      - LoginPage: login-page.md
+      - OnboardPage: onboard-page.md
+      - SettingsPage: settings-page.md
+      - WorkforcePage: workforce-page.md
+      - MailPages:
+        - MailhogPage: mailhog-page.md
+        - MailinatorPage: mailinator-page.md
+        - MaildropPage: maildrop-page.md
   - Debugging: debugging.md
   - Working with System Files: system-files.md
   - Reports: reports.md

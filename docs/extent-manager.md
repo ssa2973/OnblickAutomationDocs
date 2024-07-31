@@ -1,25 +1,56 @@
 # ExtentManager
 
-Below are the methods in the `ExtentManager` class used to manage the extent reports:
+The `ExtentManager` class is responsible for managing the creation and configuration of the Extent Reports instance used for generating test reports. It ensures that the reporting setup is initialized only once and provides access to the configured `ExtentReports` instance.
 
-## Members
 
-### GetInstance
+## **Class Definition**
 
-Creates a new `HtmlReporter` instance, attaches it to the `ExtentReports` instance and returns the `ExtentReports` instance.
+---
 
-=== "Method Signature"
+```csharp
+public class ExtentManager
+```
+
+## **Properties**
+
+---
+
+- ExtentReports extent: Static instance of `ExtentReports` used to generate and manage reports.
+
+## **Methods**
+
+---
+
+=== "GetInstance"
 
 	```csharp
 	public static ExtentReports GetInstance()
 	```
+
+=== "Description"
+
+	This method creates and returns a singleton instance of `ExtentReports`. If an instance of `ExtentReports` does not already exist, it initializes one and configures it with an `ExtentV3HtmlReporter`.
+
 === "Returns"
 
-	An `ExtentReports` instance.
+	- The configured `ExtentReports` instance.
 
-=== "Usage"
-	
-	Used in [`ReportsGenerationClass`](./reports-generation-class.md) to get the `ExtentReports` instance.)
+=== "Details"
+
+	1. HTML Reporter Configuration:
+		- Theme: Dark
+		- Timeline: Disabled
+	1. Report Path: Retrieved using [`ReportsGenerationClass.GetReportPath()`](./reports-generation-class.md/#getreportpath).
+
+=== "Usage Example"
+
 	```csharp
 	ExtentReports extent = ExtentManager.GetInstance();
 	```
+
+## **Notes**
+
+---
+
+- The singleton pattern is used to ensure that only one instance of ExtentReports is created and used throughout the test execution.
+- The HTML reporter settings are configured to use a dark theme and disable the timeline feature.

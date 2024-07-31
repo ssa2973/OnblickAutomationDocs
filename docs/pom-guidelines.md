@@ -4,6 +4,8 @@ Page Object Model in our current Project follows some guidelines and practices. 
 
 ## **Constructing Locators**
 
+---
+
 Below are the conventions to follow for writing locators in the project:
 
 1. **Use ID, Name, CSS, XPath locators in the order of preference**:
@@ -28,6 +30,8 @@ Below are the conventions to follow for writing locators in the project:
 	By.XPath("/html/body/div[1]/div[2]/div[3]/div[4]/input")
 	```
 ## **Best Practices for Current Project**
+
+---
 
 1. **Use Page Object Model**:
 	- Use Page Object Model to create a separate class for each page.

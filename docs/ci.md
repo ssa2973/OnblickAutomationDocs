@@ -2,6 +2,8 @@
 
 ## **Pipelines**
 
+---
+
 1. This project uses Azure Devops Pipelines for Continuous Integration.
 1. There are multiple pipelines that are used to test in different environments whenever there are new releases. 
 1. The [pipelines](https://onblickrigaps.visualstudio.com/Automation/_build){:target=_blank} are triggered based on `testCategory` - which are assigned to each test. 
@@ -13,6 +15,8 @@
 1. All the other pipelines can only be triggered manually.
 
 ### Stages
+
+---
 
 1. The pipelines have multiple stages - but all stages are simliar/same between different pipelines.
 1. The stages are:
@@ -32,15 +36,21 @@
 
 ### Test Results
 
+---
+
 1. The test results are published to Azure Devops Pipelines.
 1. The test results are published in the form of `Test Run` and `Test Result` in the Azure Devops Pipelines.
 
 ### Test Reports
 
+---
+
 1. The test reports are published as Artifacts to Azure Devops Pipelines.
 1. The test reports are published in the form of `HTML` files in the `ExtentReports` directory of the published artifacts for the build pipeline.
 
 ### Test Logs
+
+---
 
 1. You can view the test logs in the `Run Tests` task of the pipeline.
 1. The logs are grouped by tests and also colored based on the test pass or fail status.
@@ -48,6 +58,8 @@
 1. All these logs are colored and grouped based on their status and tests so they are easy to read and understand.
 
 ## **Email Notifications**
+
+---
 
 1. The pipelines are configured to send email notifications to the team whenever the pipeline finishes running.
 1. The email notifications are sent to the team members who are part of the teams - `automationteam@onblick.com` and `qateam@onblick.com`.

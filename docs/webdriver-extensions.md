@@ -6,6 +6,8 @@ WebDriverExtensions is a collection of extensions for Selenium WebDriver. It pro
 
 ### **OpenNewTab**
 
+---
+
 The `OpenNewTab` method is an extension method that opens a new tab.
 
 === "Method Signature"
@@ -29,9 +31,9 @@ The `OpenNewTab` method is an extension method that opens a new tab.
 	driver.OpenNewTab();
 	```
 
----
-
 ### **UploadFile**
+
+---
 
 The `UploadFile` method is an extension method that uploads a file to a file input element.
 
@@ -57,9 +59,9 @@ The `UploadFile` method is an extension method that uploads a file to a file inp
 	driver.UploadFile("C:\\path\\to\\file.txt");
 	```
 
----
-
 ### **GetUserName**
+
+---
 
 The `GetUserName` method is an extension method that retrieves the username of the current user.
 
@@ -84,9 +86,9 @@ The `GetUserName` method is an extension method that retrieves the username of t
 	```csharp
 	string userName = driver.GetUserName();
 	```
----
-
 ### **GetDesignation**
+
+---
 
 The `GetDesignation` method is an extension method that retrieves the designation of the current user.
 
@@ -112,9 +114,9 @@ The `GetDesignation` method is an extension method that retrieves the designatio
 	string designation = driver.GetDesignation();
 	```
 
----
-
 ### **GetCurrentRole**
+
+---
 
 The `GetCurrentRole` method is an extension method that retrieves the current role of the user.
 
@@ -140,9 +142,9 @@ The `GetCurrentRole` method is an extension method that retrieves the current ro
 	string role = driver.GetCurrentRole();
 	```
 
----
-
 ### **GetOrgName**
+
+---
 
 The `GetOrgName` method is an extension method that retrieves the organization name of the user.
 
@@ -168,9 +170,9 @@ The `GetOrgName` method is an extension method that retrieves the organization n
 	string orgName = driver.GetOrgName();
 	```
 
----
-
 ### **GetCandidateProfileName**
+
+---
 
 The `GetCandidateProfileName` method is an extension method that retrieves the candidate profile name.
 
@@ -196,9 +198,9 @@ The `GetCandidateProfileName` method is an extension method that retrieves the c
 	string candidateProfileName = driver.GetCandidateProfileName();
 	```
 
----
-
 ### ***SetZoomLevel***
+
+---
 
 The `SetZoomLevel` method is an extension method that sets the zoom level of the browser.
 
@@ -227,9 +229,9 @@ The `SetZoomLevel` method is an extension method that sets the zoom level of the
 	```
 _Note: Refrain from using this method for now as it's still a bit undeveloped._
 
----
-
 ### ***ClickByOffSetFromViewport***
+
+---
 
 The `ClickByOffSetFromViewport` method is an extension method that clicks on the webpage by providing the offset from the viewport.
 
@@ -255,5 +257,3 @@ The `ClickByOffSetFromViewport` method is an extension method that clicks on the
 	driver.ClickByOffSetFromViewport(new Point(100, 100));
 	```
 _Note: Refrain from using this method for now as it's still a bit undeveloped._
-
----

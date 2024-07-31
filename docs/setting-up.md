@@ -1,7 +1,10 @@
 # Setting Up the Environment
 
 ## **Cloning the Repository**
-Clone the repository (if you have access to it) and navigate to the project's directory. You can clone it in two ways, one using the `git clone` command and the `Visual Studio` interface.
+
+---
+
+To start working on the project, you need to clone the repository. You can do this using either the `git clone` command or the `Visual Studio` interface.
 
 === "Using Visual Studio"
 	1. Open Visual Studio.
@@ -14,23 +17,41 @@ Clone the repository (if you have access to it) and navigate to the project's di
 	git clone https://onblickrigaps.visualstudio.com/Automation/_git/Selenium2.0
 	```
 
-After you finish cloning, the setup should be complete.
+After cloning the repository, you are ready to proceed with the setup.
 
-## **Changing the environment tests are running on**
+## **Configuring the Test Environment**
 
-In `Environment.cs` you can change the environment the tests are running on. The default environment is `demo`.
+---
+
+The environment in which tests run can be configured through the `Environment.cs` file. By default, the environment is set to `demo`.
+
+### Updating the Environment Configuration
+
+To set a different environment for your tests, update the `Name` property in the `Environment.cs` file with the desired environment value.
 
 === "Environment.cs"
 	```csharp
 	public static string Name => System.Environment.GetEnvironmentVariable("ENVIRONMENT") ?? "demo";
 	```
 
-=== "Allowed values for Environment variable"
+### Supported Environment Values
 
-	Allowed values for `ENVIRONMENT` or `Environment.Name` are `demo`, `dev`, `prod`, `dev1`, `dev2`.
+The following environment values are available: 
+
+=== "Allowed values for Environment variable"
+	
+	| Value | Description |
+	| ---- | ----------- |
+	| `demo` | Demo environment for testing purposes. |
+	| `prod` | Production environment. |
+	| `dev` | General development environment. |
+	| `dev1` | First development environment. |
+	| `dev2` | Second development environment. |
 
 ### Setting the Environment variable
 
-_This `ENVIRONMENT` variable is also used in the pipeline to control which environment the tests are being executed on._
+To set the `ENVIRONMENT` variable, follow the instructions based on your operating system or pipeline configuration. This variable controls which environment the tests will execute against.
 
 ![Environment Variable](./assets/images/env.png)
+
+Ensure that the correct environment variable is set before running your tests to ensure they execute against the intended environment.

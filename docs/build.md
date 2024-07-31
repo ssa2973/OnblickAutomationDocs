@@ -6,10 +6,14 @@ Building the solution is an essential step to ensure that all dependencies are c
 
 ### **Open the Solution in Visual Studio**
 
+---
+
 - Open Visual Studio 2022.
 - Navigate to the project directory and open the solution file (`.sln`).
 
 ### **Restore NuGet Packages**
+
+---
 
 To restore the necessary NuGet packages:
 
@@ -23,6 +27,8 @@ To restore the necessary NuGet packages:
 
 ### **Build the Solution**
 
+---
+
 To build the solution:
 
 - Click on `Build` in the Visual Studio menu.
@@ -33,6 +39,8 @@ To build the solution:
 
 ### **Verify the Build Output**
 
+---
+
 After building the solution, verify the build output:
 
 - Check the `Output` window in Visual Studio for the build output.
@@ -42,6 +50,8 @@ After building the solution, verify the build output:
 - If the build is successful, the project is ready for execution.
 
 ### **Conclusion**
+
+---
 
 Building the solution ensures that all dependencies are correctly installed, and the project is compiled without any errors. This step is crucial before running your Selenium C# automation tests to ensure that the project is in a stable state and ready for execution.
 

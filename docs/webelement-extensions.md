@@ -8,6 +8,8 @@ There are some private methods (italicized headings) used in the extension metho
 
 ### Private Methods
 
+---
+
 #### ***GetDriverFromElement***
 
 The `GetDriverFromElement` method is a private method used in almost all the methods in this class to get the WebDriver instance from an IWebElement object.
@@ -27,7 +29,6 @@ The `GetDriverFromElement` method is a private method used in almost all the met
 
 	The method returns the WebDriver instance associated with the element.
 
----
 
 #### ***GetInterceptingElement*** 
 
@@ -47,7 +48,6 @@ The `GetDriverFromElement` method is a private method used in almost all the met
 
 	The method returns the identifier of the element that is intercepting the click.
 
----
 
 #### ***MoveInterceptingElement***
 
@@ -63,9 +63,9 @@ The `MoveInterceptingElement` method is an extension method that moves an interc
 	| ---- | ---- | ----------- |
 	| `interceptingElement` | IWebElement | The element that is obstructing the click. |
 
-----
-
 ### **IClick**
+
+----
 
 The `IClick` method is an extension method that clicks on an element. It is equivalent to calling the `Click` method on an IWebElement object. `IClick` - **Interception Click** handler that manages intercepted exceptions.
 
@@ -101,9 +101,9 @@ The `IClick` method is an extension method that clicks on an element. It is equi
 	element.IClick();
 	```
 
----
-
 ### **ScrollToTheLeft**
+
+---
 
 The `ScrollToTheLeft` method is used to scroll to the leftmost of the page within the scrollable element on the webpage.
 
@@ -124,9 +124,9 @@ The `ScrollToTheLeft` method is used to scroll to the leftmost of the page withi
 	element.ScrollToTheLeft();
 	```
 
----
-
 ### **ScrollToTheRight**
+
+---
 
 The `ScrollToTheRight` method is used to scroll to the rightmost of the page within the scrollable element on the webpage.
 
@@ -148,9 +148,9 @@ The `ScrollToTheRight` method is used to scroll to the rightmost of the page wit
 	element.ScrollToTheRight();
 	```
 
----
-
 ### **IGetHexColor**
+
+---
 
 The `IGetHexColor` method is an extension method that retrieves the hex color of the element. It is equivalent to calling the `GetCssValue` method on an IWebElement object. It has two overload methods, one that returns the hex color as a string and another that validates the hex color with an expected value.
 
@@ -191,9 +191,9 @@ The `IGetHexColor` method is an extension method that retrieves the hex color of
 	element.IGetHexColor("color", "#000000");
 	```
 
----
-
 ### **Highlight**
+
+---
 
 The `Highlight` method is an extension method that highlights an element on the page. It is used to visually identify the element on the page.
 
@@ -219,9 +219,9 @@ The `Highlight` method is an extension method that highlights an element on the 
 	element.Highlight();
 	```
 
----
-
 ### **Unhighlight**
+
+---
 
 The `Unhighlight` method is an extension method that removes the highlight from an element on the page. It is used to remove the visual identification of the element.
 
@@ -247,9 +247,9 @@ The `Unhighlight` method is an extension method that removes the highlight from 
 	element.Unhighlight();
 	```
 
----
-
 ### **ScrollTo**
+
+---
 
 The `ScrollTo` method is an extension method that scrolls to an element on the page. It is used to bring the element into view.
 
@@ -276,9 +276,9 @@ The `ScrollTo` method is an extension method that scrolls to an element on the p
 	element.ScrollTo();
 	```
 
----
-
 ### **Scroll**
+
+---
 
 The `Scroll` method is an extension method that scrolls the page by a specified number of pixels. It is used to scroll the page up or down by a specific amount.
 
@@ -313,9 +313,9 @@ The `Scroll` method is an extension method that scrolls the page by a specified 
 	element.Scroll("up", 500);
 	```
 
----
-
 ### **DateEntry**
+
+---
 
 The `DateEntry` method is an extension method that enters a date into a date picker element. It is used to automate the entry of dates into date picker elements.
 
@@ -343,9 +343,9 @@ The `DateEntry` method is an extension method that enters a date into a date pic
 	element.DateEntry("12/31/2022");
 	```
 
----
-
 ### **ClearAndEnter**
+
+---
 
 The `ClearAndEnter` method is an extension method that clears the existing text in an input field and enters new text. It is used to automate the clearing and entering of text into input fields.
 
@@ -372,9 +372,9 @@ The `ClearAndEnter` method is an extension method that clears the existing text 
 	element.ClearAndEnter("Text to enter");
 	```
 
----
-
 ### **ClickLeft**
+
+---
 
 The `ClickLeft` method is an extension method that clicks on the left side of an element. It is used to simulate a click on the left side of an element.
 
@@ -402,9 +402,9 @@ The `ClickLeft` method is an extension method that clicks on the left side of an
 	element.ClickLeft(20);
 	```
 
----
-
 ### **Hover**
+
+---
 
 The `Hover` method is an extension method that hovers over an element. It is used to simulate a mouse hover action on an element.
 
@@ -430,9 +430,9 @@ The `Hover` method is an extension method that hovers over an element. It is use
 	element.Hover();
 	```
 
----
-
 ### **CtrlClick**
+
+---
 
 The `CtrlClick` method is an extension method that performs a Ctrl+Click action on an element. It is used to simulate a Ctrl+Click action on an element which opens the hyperlink of an element in a new tab.
 
@@ -458,5 +458,3 @@ The `CtrlClick` method is an extension method that performs a Ctrl+Click action 
 	IWebElement element = driver.FindElement(By.Id("elementId"));
 	element.CtrlClick();
 	```
-
----

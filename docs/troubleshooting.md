@@ -4,6 +4,8 @@ If you have any questions or issues, please contact us at [automationteam@onblic
 
 ## **Reporting Issues**
 
+---
+
 To help us resolve your issue quickly, please include the following information when reporting:
 
 - **Description**: A clear and concise description of the problem.
@@ -15,10 +17,14 @@ To help us resolve your issue quickly, please include the following information 
 
 ## **Contact Information**
 
+---
+
 - **Project related Issues**: Please open an issue on this [repository](https://onblickrigaps.visualstudio.com/Automation){:target=_blank}.
 - **General Questions/Issues**: Contact us at [qateam@onblick.com](mailto:qateam@onblick.com).
 
 ## **FAQs**
+
+---
 
 - **What is the purpose of this project?**
 	- The purpose of this project is to automate the testing of the OnBlick application.

@@ -2,11 +2,15 @@
 
 ## **Introduction**
 
+---
+
 Welcome to the Selenium C# Automation Project for [OnBlick 2.0](https://www.onblick.com){:target='_blank'}. This project aims to automate various web application functionalities using Selenium WebDriver with C#. The goal is to ensure robust and efficient automated testing to improve the quality and reliability of the [OnBlick 2.0](https://www.onblick.com){:target='_blank'} application.
 
 ## **Project Overview**
 
-The Selenium C# Automation Project for [OnBlick 2.0](https://www.onblick.com){:target='_blank'} focuses on creating a suite of automated tests to cover key functionalities of the web application. The project uses the [Page Object Model (POM)](./pom-introduction.md) design pattern to enhance code maintainability and readability.
+---
+
+This project focuses on creating a suite of automated tests to cover key functionalities of the web application. The project uses the [Page Object Model (POM)](./pom-introduction.md) design pattern to enhance code maintainability and readability.
 
 ### Key Features
 
@@ -14,3 +18,9 @@ The Selenium C# Automation Project for [OnBlick 2.0](https://www.onblick.com){:t
 - Structured using the [Page Object Model](./pom-introduction.md) for better organization and maintenance.
 - Integration with continuous integration tools for automated test execution.
 - Detailed test reports and logs for better visibility and analysis.
+
+## **Getting Started**
+
+---
+
+To get started with this project, ensure you have all the [Prerequisites](./prerequisites.md) first and then follow the [setup guide](./setting-up.md) for instructions on configuring your environment and running the automated tests.

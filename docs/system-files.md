@@ -4,6 +4,8 @@ We will be working with files mainly while using file uploads/downloads or gener
 
 ## **File Uploads**
 
+---
+
 Let's say our current test requires us to upload a file called `sample.pdf` which is present in the `TestData/Files` folder. We can use the following code to upload the file:
 
 === "UploadFile"
@@ -25,9 +27,10 @@ Let's say our current test requires us to upload a file called `sample.pdf` whic
 	1. `Path.Combine()` - This method combines the specified paths into one path.
 	1. `..` - This is used to move up one directory level.
 
----
 
 ## **File Downloads**
+
+---
 
 Let's say our current test requires us to download a file and we don't exactly know the name of the file being downloaded. So we need to check for the number of the files before and wait for a enw file to be added to the `Downloads` directory. Assuming our `Downloads` directory is in our project directory, below is the code to download the file:
 
@@ -61,9 +64,9 @@ Let's say our current test requires us to download a file and we don't exactly k
 	1. `..` - This is used to move up one directory level.
 	1. Important point to note is that using a `while` loop is not recommended in real-time scenarios as it will keep the test running until the file is downloaded. Instead, we can use a `Wait` condition to wait for the file to be downloaded.
 
----
-
 ## **Generating Reports**
+
+---
 
 While working with Reports we mainly use System Files while creating a report path or storing a screenshot.
 

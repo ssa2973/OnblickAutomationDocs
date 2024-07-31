@@ -1,6 +1,9 @@
 # BrowserOptions
 
 ## **DefaultChromeOptions**
+
+---
+
 The `DefaultChromeOptions` class extends `ChromeOptions` to provide a default configuration for Chrome WebDriver instances.
 
 ### Configuration Details

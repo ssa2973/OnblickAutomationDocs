@@ -6,6 +6,8 @@
 
 ### **CustomRetryAttribute**
 
+---
+
 `CustomRetryAttribute` is an attribute that can be used to specify the number of times a test should be retried if it fails with a particular exception which contains `"The HTTP request to the remote WebDriver server for URL"` in the message.
 
 #### Constructor
@@ -98,9 +100,9 @@ The `RetryCommand` class implements the logiv for retrying a test method.
 	```
 _Note: Both examples apply the `Test` and `CustomRetry(3)` attributes to the `TestMethod`. The choice between the two styles is mostly a matter of personal preference or coding style guidelines_
 
----
-
 ### **IgnoreAssertionFailuresAttribute**
+
+---
 
 The `IgnoreAssertionFailuresAttribute` class is used to specify that a test should be marked as passed if it failed only due to soft assertion failures.
 

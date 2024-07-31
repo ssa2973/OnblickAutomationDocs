@@ -2,9 +2,13 @@
 
 ## **Introduction**
 
+---
+
 Page Object Model is a design pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your application. 
 
 ## **Benefits of Page Object Model**
+
+---
 
 1. **Code Reusability**: Page Object Model allows you to write your tests in a more modular way, which means that you can reuse the same page object in multiple tests. This reduces code duplication and makes your tests easier to maintain.
 1. **Code Maintainability**: Page Object Model makes your tests more maintainable because it separates the test logic from the page-specific logic. This means that if the page changes, you only need to update the page object, rather than updating all of your tests.
@@ -14,9 +18,13 @@ Page Object Model is a design pattern which has become popular in test automatio
 
 ## **Page Object Model in Selenium**
 
+---
+
 In Selenium, Page Object Model is implemented by creating a separate class for each page of your application. Each page object class contains the page-specific logic, such as finding elements on the page and interacting with them. The test logic is then written in separate test classes, which use the page object classes to interact with the pages of the application.
 
-## Example
+## **Example**
+
+---
 
 In this example, we will create a page object class for the Google search page. The page object class will contain methods for interacting with the search page, such as entering a search query and clicking the search button. We will then write a test class that uses the page object class to perform a search on the Google search page.
 
