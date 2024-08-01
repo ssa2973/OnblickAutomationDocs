@@ -93,7 +93,7 @@ This method is used to logout from the application.
 
 	1. Click on the user icon.
 	1. Click on the logout button.
-	1. Wait until the url is `Login__URl`.
+	1. Wait until the url is `Login_URl`.
 
 #### ***ResetPassword***
 
