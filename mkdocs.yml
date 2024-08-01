@@ -47,6 +47,7 @@ nav:
   - Project Structure: project-structure.md
   - Setting Up the Environment: setting-up.md
   - Building the solution: build.md
+  - Writing Proper Test Cases: test-cases.md
   - Writing Your First Test: first-test.md
   - Running Tests: running-tests.md
   - Understanding Pre-defined Utilities and Classes: 
