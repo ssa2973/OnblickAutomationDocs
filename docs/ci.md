@@ -40,13 +40,16 @@
 
 1. The test results are published to Azure Devops Pipelines.
 1. The test results are published in the form of `Test Run` and `Test Result` in the Azure Devops Pipelines.
+1. Here's what a test result would look like - 
+	![Test Results](./assets/images/test-results.png)
 
 ### Test Reports
 
 ---
 
 1. The test reports are published as Artifacts to Azure Devops Pipelines.
-1. The test reports are published in the form of `HTML` files in the `ExtentReports` directory of the published artifacts for the build pipeline.
+1. The test reports are published in the form of `HTML` files in the `ExtentReports` directory of the published artifacts for the build pipeline
+1. To see an example of `Test Reports` go to [Example Report](./reports.md/#report-example) in the Reports Section.
 
 ### Test Logs
 
@@ -56,6 +59,8 @@
 1. The logs are grouped by tests and also colored based on the test pass or fail status.
 1. The logs also contain each test step from [`ExecuteStep`](./testexecution-helper.md/#executestep) whenever the current step has started and finished.
 1. All these logs are colored and grouped based on their status and tests so they are easy to read and understand.
+1. Here's what the logs would look like - 
+	![Test Logs](./assets/images/test-logs.png)
 
 ## **Email Notifications**
 
