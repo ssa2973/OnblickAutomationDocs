@@ -44,7 +44,7 @@ Wraps a test method command and returns the result.
 
 #### Nested Class: Retry Command
 
-The `RetryCommand` class implements the logiv for retrying a test method.
+The `RetryCommand` class implements the logic for retrying a test method.
 
 ##### Constructor
 
