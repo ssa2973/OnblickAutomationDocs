@@ -1,0 +1,2689 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../settings-page/">
+      
+      
+        <link rel="next" href="../mailhog-page/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>WorkforcePage - Onblick Automation Reference Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#workforcepage" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Onblick Automation Reference Guide" class="md-header__button md-logo" aria-label="Onblick Automation Reference Guide" data-md-component="logo">
+      
+  <img src="../assets/images/onblick-logo.gif" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Onblick Automation Reference Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              WorkforcePage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Onblick Automation Reference Guide" class="md-nav__button md-logo" aria-label="Onblick Automation Reference Guide" data-md-component="logo">
+      
+  <img src="../assets/images/onblick-logo.gif" alt="logo">
+
+    </a>
+    Onblick Automation Reference Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Up the Environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building the solution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Proper Test Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Your First Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running-tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running Tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Understanding Pre-defined Utilities and Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Understanding Pre-defined Utilities and Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../attribute-extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AttributeExtensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browser-options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BrowserOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extent-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ExtentManager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login-creds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LoginCreds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports-generation-class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ReportsGenerationClass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-failure-context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SharedFailureContext
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soft-assertion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SoftAssertion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testexecution-helper/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TestExecutionHelper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../urls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    URLs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wait-helpers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WaitHelpers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_11" id="__nav_9_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    WebExtensions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_11">
+            <span class="md-nav__icon md-icon"></span>
+            WebExtensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webdriver-extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebDriverExtensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webelement-extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebElementExtensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Page Object Model (POM)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Page Object Model (POM)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pom-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pom-guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frequently Utilized POM Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            Frequently Utilized POM Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LoginPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onboard-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OnboardPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SettingsPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    WorkforcePage
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    WorkforcePage
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enums
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#employeetype" class="md-nav__link">
+    <span class="md-ellipsis">
+      EmployeeType
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Locators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searchemployee" class="md-nav__link">
+    <span class="md-ellipsis">
+      SearchEmployee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searchemployee_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SearchEmployee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gotoemployeeprofile" class="md-nav__link">
+    <span class="md-ellipsis">
+      GoToEmployeeProfile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleteemployee" class="md-nav__link">
+    <span class="md-ellipsis">
+      DeleteEmployee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleteemployees" class="md-nav__link">
+    <span class="md-ellipsis">
+      DeleteEmployees
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trydeleteemployee" class="md-nav__link">
+    <span class="md-ellipsis">
+      TryDeleteEmployee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletei9" class="md-nav__link">
+    <span class="md-ellipsis">
+      DeleteI9
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enableess" class="md-nav__link">
+    <span class="md-ellipsis">
+      EnableESS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disableess" class="md-nav__link">
+    <span class="md-ellipsis">
+      DisableESS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettextfromcolumn" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTextFromColumn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatecandidatedetails" class="md-nav__link">
+    <span class="md-ellipsis">
+      ValidateCandidateDetails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managerole" class="md-nav__link">
+    <span class="md-ellipsis">
+      ManageRole
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addcandidatetosupervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      AddCandidateToSupervisor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addsupervisorinreportingto" class="md-nav__link">
+    <span class="md-ellipsis">
+      AddSupervisorInReportingTo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clickellipsisunderbanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClickEllipsisUnderBanner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managesupervision" class="md-nav__link">
+    <span class="md-ellipsis">
+      ManageSupervision
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3_5" id="__nav_10_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MailPages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            MailPages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mailhog-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MailhogPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mailinator-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MailinatorPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maildrop-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaildropPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with System Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vs-shortcuts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Must know Shortcuts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enums
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#employeetype" class="md-nav__link">
+    <span class="md-ellipsis">
+      EmployeeType
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Locators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searchemployee" class="md-nav__link">
+    <span class="md-ellipsis">
+      SearchEmployee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searchemployee_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SearchEmployee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gotoemployeeprofile" class="md-nav__link">
+    <span class="md-ellipsis">
+      GoToEmployeeProfile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleteemployee" class="md-nav__link">
+    <span class="md-ellipsis">
+      DeleteEmployee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleteemployees" class="md-nav__link">
+    <span class="md-ellipsis">
+      DeleteEmployees
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trydeleteemployee" class="md-nav__link">
+    <span class="md-ellipsis">
+      TryDeleteEmployee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletei9" class="md-nav__link">
+    <span class="md-ellipsis">
+      DeleteI9
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enableess" class="md-nav__link">
+    <span class="md-ellipsis">
+      EnableESS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disableess" class="md-nav__link">
+    <span class="md-ellipsis">
+      DisableESS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettextfromcolumn" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTextFromColumn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validatecandidatedetails" class="md-nav__link">
+    <span class="md-ellipsis">
+      ValidateCandidateDetails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managerole" class="md-nav__link">
+    <span class="md-ellipsis">
+      ManageRole
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addcandidatetosupervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      AddCandidateToSupervisor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addsupervisorinreportingto" class="md-nav__link">
+    <span class="md-ellipsis">
+      AddSupervisorInReportingTo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clickellipsisunderbanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClickEllipsisUnderBanner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managesupervision" class="md-nav__link">
+    <span class="md-ellipsis">
+      ManageSupervision
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="workforcepage">WorkforcePage</h1>
+<p>The <code>WorkforcePage</code> class contains all the enums, locators and methods necessary to interact with the Workforce page of the application. The Workforce page is used to manage the workforce of an organization, including adding, editing, and deleting employees.</p>
+<h2 id="members">Members</h2>
+<h3 id="enums"><strong>Enums</strong></h3>
+<hr />
+<p>The <code>WorkforcePage</code> class contains the following enums:</p>
+<h4 id="employeetype"><strong>EmployeeType</strong></h4>
+<p>The <code>EmployeeType</code> enumeration represents different states or categories of an employee within the system. This enum is used to classify and manage employees based on their current employment status.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enum Members</label><label for="__tabbed_1_2">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Active</code></td>
+<td>Represents an active employee.</td>
+</tr>
+<tr>
+<td><code>NewHire</code></td>
+<td>Represents a new hire employee.</td>
+</tr>
+<tr>
+<td><code>Terminated</code></td>
+<td>Represents a terminated employee.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p>This enum is used in multiple worforce methods to classify employees based on their current status.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">EmployeeType</span><span class="w"> </span><span class="n">employeeType1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EmployeeType</span><span class="p">.</span><span class="n">Active</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">EmployeeType</span><span class="w"> </span><span class="n">employeeType2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EmployeeType</span><span class="p">.</span><span class="n">NewHire</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">EmployeeType</span><span class="w"> </span><span class="n">employeeType3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EmployeeType</span><span class="p">.</span><span class="n">Terminated</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="locators"><strong>Locators</strong></h3>
+<hr />
+<p>The locators used in the <code>WorkforcePage</code> class aren't disclosed here, you can go through the <code>WorkforcePage.cs</code> file in the project to view the locators. All locator members are of two types <code>By</code> and <code>IWebElement</code>(using <code>PageObjectFactory</code>).</p>
+<h3 id="methods"><strong>Methods</strong></h3>
+<hr />
+<p>The <code>WorkforcePage</code> class contains several methods that are used to interact with the Workforce page. Some of the methods are private and some are public, italicized methods are private methods.</p>
+<h4 id="searchemployee"><strong>SearchEmployee</strong></h4>
+<hr />
+<p>The <code>SearchEmployee</code> method searches for an employee in the workforce based on their email and first name. It navigates to the appropriate workforce URL depending on the employee's status (<code>Active</code>, <code>NewHire</code>, or <code>Terminated</code>) and performs a search. If the employee is not found and the status is <code>Active</code>, it will attempt to search under <code>NewHire</code> status as well.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Method Signature</label><label for="__tabbed_2_2">Parameters</label><label for="__tabbed_2_3">Functionality</label><label for="__tabbed_2_4">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SearchEmployee</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">empMail</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">empFirstName</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeType</span><span class="o">?</span><span class="w"> </span><span class="n">employeeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>empMail</code></td>
+<td><code>string</code></td>
+<td>The email address of the employee to search for.</td>
+</tr>
+<tr>
+<td><code>empFirstName</code></td>
+<td><code>string</code></td>
+<td>The first name of the employee to search for.</td>
+</tr>
+<tr>
+<td><code>employeeType</code></td>
+<td><code>EmployeeType?</code></td>
+<td>The type of employee to search for (<code>Active</code>, <code>NewHire</code>, or <code>Terminated</code>).</td>
+</tr>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Navigate to the appropriate workforce URL based on the employee's status.</li>
+<li>Enter the email address of the employee in the search fields.</li>
+<li>Click the search button to find the employee.</li>
+<li>Wait until the employee is found with <code>empFirstName</code>.</li>
+<li>If the employee is not found and the status is <code>Active</code>, attempt to search under <code>NewHire</code> status as well.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">WorkforcePage</span><span class="w"> </span><span class="n">workforcePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WorkforcePage</span><span class="p">();</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">workforcePage</span><span class="p">.</span><span class="n">SearchEmployee</span><span class="p">(</span><span class="s">&quot;john.doe@example.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeType</span><span class="p">.</span><span class="n">NewHire</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Search Workforce&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="searchemployee_1"><strong><em>SearchEmployee</em></strong></h4>
+<hr />
+<p>The <code>SearchEmployee</code> method searches for an employee in the workforce based on their email. It navigates to the appropriate workforce URL depending on the employee's status (<code>Active</code>, <code>NewHire</code>, or <code>Terminated</code>) and performs a search. This method is only for [<code>TryDeleteEmployee</code>], DO NOT use it anywhere else, as it's functionality will also be changed soon.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Method Signature</label><label for="__tabbed_3_2">Parameters</label><label for="__tabbed_3_3">Functionality</label><label for="__tabbed_3_4">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SearchEmployee</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">empMail</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeType</span><span class="o">?</span><span class="w"> </span><span class="n">employeeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>empMail</code></td>
+<td><code>string</code></td>
+<td>The email address of the employee to search for.</td>
+</tr>
+<tr>
+<td><code>employeeType</code></td>
+<td><code>EmployeeType?</code></td>
+<td>The type of employee to search for (<code>Active</code>, <code>NewHire</code>, or <code>Terminated</code>).</td>
+</tr>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Navigate to the appropriate workforce URL based on the employee's status.</li>
+<li>Enter the email address of the employee in the search fields.</li>
+<li>Click the search button to find the employee.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">WorkforcePage</span><span class="w"> </span><span class="n">workforcePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WorkforcePage</span><span class="p">();</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">workforcePage</span><span class="p">.</span><span class="n">SearchEmployee</span><span class="p">(</span><span class="s">&quot;john.doe@example.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeType</span><span class="p">.</span><span class="n">NewHire</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Search Employee&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="gotoemployeeprofile"><strong>GoToEmployeeProfile</strong></h4>
+<hr />
+<p>The <code>GotoEmployeeProfile</code> method navigates to an employee's profile based on the provided <a href="../onboard-page/#onboarddetails"><code>OnboardDetails</code></a>. It handles navigation through various conditions, including checking if the profile name matches, handling pop-ups, and searching for the employee. This method uses <a href="../webdriver-extensions/#getcandidateprofilename"><code>GetCandidateProfileName</code></a> and <a href="#searchemployee"><code>SearchEmployee</code></a> methods internally.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Method Signature</label><label for="__tabbed_4_2">Parameters</label><label for="__tabbed_4_3">Functionality</label><label for="__tabbed_4_4">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">GotoEmployeeProfile</span><span class="p">(</span><span class="n">OnboardDetails</span><span class="w"> </span><span class="n">onboardDetails</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeType</span><span class="o">?</span><span class="w"> </span><span class="n">empType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboardDetails</code></td>
+<td><a href="../onboard-page/#onboarddetails"><code>OnboardDetails</code></a></td>
+<td>The details of the employee to navigate to.</td>
+</tr>
+<tr>
+<td><code>empType</code></td>
+<td><code>EmployeeType?</code></td>
+<td>The type of employee to search for (<code>Active</code>, <code>NewHire</code>, or <code>Terminated</code>).</td>
+</tr>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Retrieve Candidate Profile Name: Retrieves the candidate profile name from the current page.</li>
+<li>Check Profile Name: Checks if the retrieved profile name contains the first and last name from onboardDetails.</li>
+<li>Navigate to Profile:<ul>
+<li>If the profile name is null or doesn't match, it navigates to the profile through a pop-up which comes after onboarding or by searching for the employee.</li>
+</ul>
+</li>
+<li>Log Navigation: Logs the navigation to the employee profile to the report.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">WorkforcePage</span><span class="w"> </span><span class="n">workforcePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WorkforcePage</span><span class="p">();</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">workforcePage</span><span class="p">.</span><span class="n">GotoEmployeeProfile</span><span class="p">(</span><span class="n">onboardDetails</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeType</span><span class="p">.</span><span class="n">Active</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Navigate to Profile&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="delete"><strong><em>Delete</em></strong></h4>
+<hr />
+<p>The <code>Delete</code> method handles the deletion of records based on the provided <code>EmployeeType</code> and locator. It performs different actions depending on whether the employee is <code>Active</code>/<code>NewHire</code> or <code>Terminated</code>. This method is an internal method used in <a href="#deleteemployee"><code>DeleteEmployee</code></a> and <a href="#deleteemployees"><code>DeleteEmployees</code></a> methods.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Method Signature</label><label for="__tabbed_5_2">Parameters</label><label for="__tabbed_5_3">Functionality</label><label for="__tabbed_5_4">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Delete</span><span class="p">(</span><span class="n">EmployeeType</span><span class="w"> </span><span class="n">employeeType</span><span class="p">,</span><span class="w"> </span><span class="n">By</span><span class="w"> </span><span class="n">Locator</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>employeeType</code></td>
+<td><code>EmployeeType</code></td>
+<td>The type of employee to delete (<code>Active</code>, <code>NewHire</code>, or <code>Terminated</code>).</td>
+</tr>
+<tr>
+<td><code>Locator</code></td>
+<td><code>By</code></td>
+<td>The locator to identify the delete button for the employee.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Click on the delete button based on the provided locator.</li>
+<li>Handle the deletion process based on the employee type (<code>Active</code>/<code>NewHire</code> or <code>Terminated</code>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used internally in the <code>DeleteEmployee</code> and <code>DeleteEmployees</code> methods. This method is only intended for those 2 methods, <strong>DO NOT</strong> use it anywhere else.</p>
+</div>
+</div>
+</div>
+<h4 id="deleteemployee"><strong>DeleteEmployee</strong></h4>
+<hr />
+<p>The <code>DeleteEmployee</code> method searches for an employee by email and first name and then deletes the employee record. It handles different actions based on the <code>EmployeeType</code>. This method uses the <a href="#searchemployee"><code>SearchEmployee</code></a>, <a href="#delete"><code>Delete</code></a>, and <a href="#deletei9"><code>DeleteI9</code></a> methods internally.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Method Signature</label><label for="__tabbed_6_2">Parameters</label><label for="__tabbed_6_3">Functionality</label><label for="__tabbed_6_4">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DeleteEmployee</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">empMail</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">empFirstName</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeType</span><span class="o">?</span><span class="w"> </span><span class="n">employeeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>empMail</code></td>
+<td><code>string</code></td>
+<td>The email address of the employee to delete.</td>
+</tr>
+<tr>
+<td><code>empFirstName</code></td>
+<td><code>string</code></td>
+<td>The first name of the employee to delete.</td>
+</tr>
+<tr>
+<td><code>employeeType</code></td>
+<td><code>EmployeeType?</code></td>
+<td>The type of employee to delete (<code>Active</code>, <code>NewHire</code>, or <code>Terminated</code>).</td>
+</tr>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Determine Employee Type: If employeeType is not specified, it defaults to Active.</li>
+<li>Set Locators: Based on the employeeType, set the appropriate locators for employee actions and delete buttons.</li>
+<li>Search Employee: Use the SearchEmployee method to find the employee by email and first name.</li>
+<li>Delete Employee: Iterate through the located elements and delete the employee. Handle possible popups and exceptions.<ul>
+<li>One possibility for exception is where there's an I-9 for the current candidate, in which case delete directly isn't possible. So, I-9 is first deleted with <a href="#deletei9"><code>DeleteI9</code></a> method and then the candidate is deleted.</li>
+<li>Another possiblity for exception is where the candidate has reporting candidates, in which case there's a confirmation popup to unlink the reporting candidates before deletion.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method should be the go to method to delete an employee. It handles all the necessary steps to delete an employee.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">WorkforcePage</span><span class="w"> </span><span class="n">workforcePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WorkforcePage</span><span class="p">();</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">workforcePage</span><span class="p">.</span><span class="n">DeleteEmployee</span><span class="p">(</span><span class="s">&quot;john.doe@example.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeType</span><span class="p">.</span><span class="n">Terminated</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Delete&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="deleteemployees"><strong><em>DeleteEmployees</em></strong></h4>
+<hr />
+<p>The DeleteEmployees method searches for multiple employee records by email and first name and deletes them. It handles different actions based on the EmployeeType. This method is designed for and used only in <a href="#trydeleteemployee"><code>TryDeleteEmployee</code></a> method, <strong>DO NOT</strong> use it anywhere else. This method uses the <a href="#delete"><code>Delete</code></a> and <a href="#deletei9"><code>DeleteI9</code></a> methods internally.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:4"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><input id="__tabbed_7_4" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Method Signature</label><label for="__tabbed_7_2">Parameters</label><label for="__tabbed_7_3">Functionality</label><label for="__tabbed_7_4">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DeleteEmployees</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">empMail</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">empFirstName</span><span class="p">,</span><span class="w"> </span><span class="n">EmployeeType</span><span class="o">?</span><span class="w"> </span><span class="n">employeeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>empMail</code></td>
+<td><code>string</code></td>
+<td>The email address of the employee to delete.</td>
+</tr>
+<tr>
+<td><code>empFirstName</code></td>
+<td><code>string</code></td>
+<td>The first name of the employee to delete.</td>
+</tr>
+<tr>
+<td><code>employeeType</code></td>
+<td><code>EmployeeType?</code></td>
+<td>The type of employee to delete (<code>Active</code>, <code>NewHire</code>, or <code>Terminated</code>).</td>
+</tr>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Determine Employee Type: If employeeType is not specified, it defaults to Active.</li>
+<li>Set Locators: Based on the employeeType, set the appropriate locators for employee actions and delete buttons.</li>
+<li>Locate and Delete Employees: Find all elements matching the locator and delete each employee, handling possible popups and exceptions.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used internally in the <code>TryDeleteEmployee</code> method. It is not intended for use outside of this context.</p>
+</div>
+</div>
+</div>
+<h4 id="trydeleteemployee"><strong>TryDeleteEmployee</strong></h4>
+<hr />
+<p>The <code>TryDeleteEmployee</code> method attempts to delete an employee by email and first name from various employee categories. It first attempts to delete the employee from the <code>Terminated</code> category and then proceeds to check and delete the employee from the <code>Active</code> and <code>NewHire</code> categories if they exist. Exception handling ensures that any issues encountered during the deletion process are appropriately managed.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:4"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><input id="__tabbed_8_4" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Method Signature</label><label for="__tabbed_8_2">Parameters</label><label for="__tabbed_8_3">Functionality</label><label for="__tabbed_8_4">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">TryDeleteEmployee</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">empMail</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">empFirstName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>empMail</code></td>
+<td><code>string</code></td>
+<td>The email address of the employee to delete.</td>
+</tr>
+<tr>
+<td><code>empFirstName</code></td>
+<td><code>string</code></td>
+<td>The first name of the employee to delete.</td>
+</tr>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Search and Delete from <code>Terminated</code>: Search for the employee in the Terminated category and delete if found.</li>
+<li>Search and Delete from <code>Active</code> and <code>NewHire</code>: Search and delete the employee from the Active and NewHire categories if found. Handle exceptions that may occur during this process.</li>
+<li>Only Tries to Delete from any category if the candidate already exists and if not, handles any exceptions that may occur.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is useful when you are onboarding a candidate and want to ensure that any existing records are deleted before proceeding.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">WorkforcePage</span><span class="w"> </span><span class="n">workforcePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WorkforcePage</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">workforcePage</span><span class="p">.</span><span class="n">TryDeleteEmployee</span><span class="p">(</span><span class="s">&quot;john.doe@example.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Node1&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="deletei9"><strong>DeleteI9</strong></h4>
+<hr />
+<p>The <code>DeleteI9</code> method is used to delete an I-9 form for an employee specified by their first name. This method handles the navigation to the I-9 tab within the employee's profile and performs the necessary steps to delete the I-9 form, including handling any warnings and verifying element visibility and clickability.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:4"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><input id="__tabbed_9_4" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Method Signature</label><label for="__tabbed_9_2">Parameters</label><label for="__tabbed_9_3">Functionality</label><label for="__tabbed_9_4">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DeleteI9</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">empFirstName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>empFirstName</code></td>
+<td><code>string</code></td>
+<td>The first name of the employee whose I-9 form is to be deleted.</td>
+</tr>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Navigate to the I-9 tab within the employee's profile.</li>
+<li>Click the delete button to remove the I-9 form.</li>
+<li>Handle any warnings or confirmations that may appear during the deletion process.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is designed for and used in only the <a href="#deleteemployee"><code>DeleteEmployee</code></a> method. It should not be used outside of this context.</p>
+</div>
+</div>
+</div>
+<h4 id="enableess"><strong>EnableESS</strong></h4>
+<hr />
+<p>The <code>EnableEss</code> method is used to enable the Employee Self-Service (ESS) feature. It waits for the ESS slider button to be visible, checks its current state, and enables it if it is not already enabled. The method then logs the action and validates that ESS is indeed enabled.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:4"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><input id="__tabbed_10_3" name="__tabbed_10" type="radio" /><input id="__tabbed_10_4" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Method Signature</label><label for="__tabbed_10_2">Parameters</label><label for="__tabbed_10_3">Functionality</label><label for="__tabbed_10_4">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnableEss</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Wait for the ESS slider button to be visible.</li>
+<li>Check the current state of the ESS slider.</li>
+<li>If the ESS slider is not enabled, click it to enable ESS.</li>
+<li>Log the action to the report and validate that ESS is enabled.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used to enable the Employee Self-Service feature in the application, assuming we're already on the candidate profile. If not use <a href="#gotoemployeeprofile"><code>GoToEmployeeProfile</code></a> first and then <code>EnableESS</code>.</p>
+<p><code>`csharp
+WorkforcePage workforcePage = new WorkforcePage();
+workforcePage.EnableEss("Enable ESS");</code></p>
+</div>
+</div>
+</div>
+<h4 id="disableess"><strong>DisableESS</strong></h4>
+<hr />
+<p>The <code>DisableEss</code> method is used to disable the Employee Self-Service (ESS) feature. It waits for the ESS slider button to be visible, checks its current state, and disables it if it is not already disabled. The method then logs the action and validates that ESS is indeed disabled.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:4"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><input id="__tabbed_11_3" name="__tabbed_11" type="radio" /><input id="__tabbed_11_4" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Method Signature</label><label for="__tabbed_11_2">Parameters</label><label for="__tabbed_11_3">Functionality</label><label for="__tabbed_11_4">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DisableEss</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Wait for the ESS slider button to be visible.</li>
+<li>Check the current state of the ESS slider.</li>
+<li>If the ESS slider is enabled, click it to disable ESS.</li>
+<li>Log the action to the report and validate that ESS is disabled.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used to disable the Employee Self-Service feature in the application, assuming we're already on the candidate profile. If not use <a href="#gotoemployeeprofile"><code>GoToEmployeeProfile</code></a> first and then <code>DisableESS</code>.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">WorkforcePage</span><span class="w"> </span><span class="n">workforcePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WorkforcePage</span><span class="p">();</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">workforcePage</span><span class="p">.</span><span class="n">DisableEss</span><span class="p">(</span><span class="s">&quot;Disable ESS&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="gettextfromcolumn"><strong><em>GetTextFromColumn</em></strong></h4>
+<hr />
+<p>The <code>GetTextFromColumn</code> method retrieves the text content of the first cell in a specified column of an HTML table, based on the header text provided. It identifies the column index using the header text, then extracts the text from the corresponding cell. This method is used in <a href="#validatecandidatedetails"><code>ValidateCandidateDetails</code></a> method</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:5"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><input id="__tabbed_12_4" name="__tabbed_12" type="radio" /><input id="__tabbed_12_5" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Method Signature</label><label for="__tabbed_12_2">Parameters</label><label for="__tabbed_12_3">Returns</label><label for="__tabbed_12_4">Functionality</label><label for="__tabbed_12_5">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetTextFromColumn</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">headerText</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>headerText</code></td>
+<td><code>string</code></td>
+<td>The text of the column header to identify the column.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>The text content of the first cell in the specified column.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Identify the column index based on the provided header text.</li>
+<li>Retrieve the text content of the first cell in the identified column.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used internally in the <code>ValidateCandidateDetails</code> method to extract specific details from the candidate profile.</p>
+</div>
+</div>
+</div>
+<h4 id="validatecandidatedetails"><strong>ValidateCandidateDetails</strong></h4>
+<hr />
+<p>The <code>ValidateCandidateDetails</code>method verifies that the details of a candidate displayed in the application match the expected values provided in the <a href="../onboard-page/#onboarddetails"><code>OnboardDetails</code></a> object. It performs this validation by comparing the displayed values in the UI with the values stored in the <a href="../onboard-page/#onboarddetails"><code>OnboardDetails</code></a> object and logs any discrepancies.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:4"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><input id="__tabbed_13_3" name="__tabbed_13" type="radio" /><input id="__tabbed_13_4" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Method Signature</label><label for="__tabbed_13_2">Parameters</label><label for="__tabbed_13_3">Functionality</label><label for="__tabbed_13_4">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ValidateCandidateDetails</span><span class="p">(</span><span class="n">OnboardDetails</span><span class="w"> </span><span class="n">onboardDetails</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboardDetails</code></td>
+<td><a href="../onboard-page/#onboarddetails"><code>OnboardDetails</code></a></td>
+<td>The expected details of the candidate to validate.</td>
+</tr>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Retrieve Column Text:<ul>
+<li>Calls GetTextFromColumn for each column header to retrieve the corresponding text value from the table.</li>
+</ul>
+</li>
+<li>Validate and Assert Values:<ul>
+<li>Compares each retrieved value with the expected value from onboardDetails and logs the validation result.</li>
+</ul>
+</li>
+<li>Special Case Handling:<ul>
+<li>Handles specific cases for gender and tax terms, applying different validation rules as necessary.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used to validate the details of a candidate after a successful <a href="../onboard-page/#bulkonboard"><code>BulkOnboard</code></a> operation.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">WorkforcePage</span><span class="w"> </span><span class="n">workforcePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WorkforcePage</span><span class="p">();</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">workforcePage</span><span class="p">.</span><span class="n">ValidateCandidateDetails</span><span class="p">(</span><span class="n">onboardDetails</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Validate Candidate Details&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="managerole"><strong><em>ManageRole</em></strong></h4>
+<hr />
+<p>The <code>ManageRole</code> method is designed to search for an employee using their email and first name, then access and manage the employee's role through the application's user interface. It involves searching for the employee, clicking on the "Actions" button associated with them, and then selecting the "Manage Role" option.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:4"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><input id="__tabbed_14_3" name="__tabbed_14" type="radio" /><input id="__tabbed_14_4" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Method Signature</label><label for="__tabbed_14_2">Parameters</label><label for="__tabbed_14_3">Functionality</label><label for="__tabbed_14_4">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ManageRole</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">empMail</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">empFirstName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>empMail</code></td>
+<td><code>string</code></td>
+<td>The email address of the employee to manage the role for.</td>
+</tr>
+<tr>
+<td><code>empFirstName</code></td>
+<td><code>string</code></td>
+<td>The first name of the employee to manage the role for.</td>
+</tr>
+<tr>
+<td><code>nodeName</code></td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Search for the employee using their email and first name.</li>
+<li>Click on the "Actions" button associated with the employee.</li>
+<li>Select the "Manage Role" option from the dropdown menu.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used in the <a href="#managesupervision"><code>ManageSupervision</code></a> method to manage the role of an employee.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">WorkforcePage</span><span class="w"> </span><span class="n">workforcePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WorkforcePage</span><span class="p">();</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">workforcePage</span><span class="p">.</span><span class="n">ManageRole</span><span class="p">(</span><span class="s">&quot;john.doe@example.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Manage Employee Role&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="addcandidatetosupervisor"><strong><em>AddCandidateToSupervisor</em></strong></h4>
+<hr />
+<p>The <code>AddCandidateToSupervisor</code> method adds a candidate to either the supervisor's list of reporting employees or assigned trainees based on the <code>isTrainee</code> flag. It handles the UI interactions required to input the candidate's full name, select them from a search result, and verify that the selection has been made.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:4"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><input id="__tabbed_15_4" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Method Signature</label><label for="__tabbed_15_2">Parameters</label><label for="__tabbed_15_3">Functionality</label><label for="__tabbed_15_4">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AddCandidateToSupervisor</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">candidateFullName</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isTrainee</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>candidateFullName</code></td>
+<td><code>string</code></td>
+<td>The full name of the candidate to add.</td>
+</tr>
+<tr>
+<td><code>isTrainee</code></td>
+<td><code>bool</code></td>
+<td>A flag indicating whether the candidate is a trainee.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Define Locators:<ul>
+<li>Creates By locators for the search result and selection choice elements.</li>
+</ul>
+</li>
+<li>Determine Input Field:<ul>
+<li>Based on the isTrainee flag, selects the appropriate input field and sends the candidate's full name.</li>
+</ul>
+</li>
+<li>Select Candidate from Search Result:<ul>
+<li>Waits for the search result element to become visible and clicks it.</li>
+</ul>
+</li>
+<li>Verify Selection:<ul>
+<li>Waits for the selection choice element to become visible to confirm that the candidate has been added.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used internally in the <a href="#managesupervision"><code>ManageSupervision</code></a> method to add candidates to a supervisor's list of reporting employees or assigned trainees.</p>
+</div>
+</div>
+</div>
+<h4 id="addsupervisorinreportingto"><strong><em>AddSupervisorInReportingTo</em></strong></h4>
+<hr />
+<p>The <code>AddSupervisorInReportingTo</code> method assigns a supervisor to the "Reporting To" field by searching for their full name and selecting them from the search results. It ensures the input field and selection are visible and interactable. This method is used in the <a href="#managesupervision"><code>ManageSupervision</code></a> method.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:4"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><input id="__tabbed_16_3" name="__tabbed_16" type="radio" /><input id="__tabbed_16_4" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Method Signature</label><label for="__tabbed_16_2">Parameters</label><label for="__tabbed_16_3">Functionality</label><label for="__tabbed_16_4">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AddSupervisorInReportingTo</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">supervisorFullName</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>supervisorFullName</code></td>
+<td><code>string</code></td>
+<td>The full name of the supervisor to assign.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Define Locators:<ul>
+<li>Creates By locators for the search result and selection choice elements based on the supervisor's full name.</li>
+</ul>
+</li>
+<li>Click Reporting To Input Field:<ul>
+<li>Waits for the "Reporting To" input field to be visible and clicks it.</li>
+</ul>
+</li>
+<li>Enter Supervisor's Name:<ul>
+<li>Waits for the text box within the "Reporting To" field to be visible and sends the supervisor's full name.</li>
+</ul>
+</li>
+<li>Select Supervisor from Search Result:<ul>
+<li>Waits for the search result element to become visible and clicks it to select the supervisor.</li>
+</ul>
+</li>
+<li>Verify Selection:<ul>
+<li>Waits for the selection choice element to become visible to confirm that the supervisor has been successfully added.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used internally in the <a href="#managesupervision"><code>ManageSupervision</code></a> method to assign a supervisor to the "Reporting To" field.</p>
+</div>
+</div>
+</div>
+<h4 id="clickellipsisunderbanner"><strong>ClickEllipsisUnderBanner</strong></h4>
+<hr />
+<p>The <code>ClickEllipsisUnderBanner</code> method attempts to click an ellipsis (three-dot menu) element located under a banner. If the click action is intercepted (typically because of a banner overlay), the method will first collapse the banner and then retry clicking the ellipsis.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:3"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><input id="__tabbed_17_3" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Method Signature</label><label for="__tabbed_17_2">Functionality</label><label for="__tabbed_17_3">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ClickEllipsisUnderBanner</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Click Ellipsis:<ul>
+<li>Attempts to click the ellipsis element located under a banner.</li>
+</ul>
+</li>
+<li>Handle Banner Overlay:<ul>
+<li>If the click action is intercepted by a banner overlay, the method will first collapse the banner and then retry clicking the ellipsis.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used to interact with elements located under a banner that may be obscured by the banner itself. It is used in the <a href="#managesupervision"><code>ManageSupervision</code></a> method.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">WorkforcePage</span><span class="w"> </span><span class="n">workforcePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WorkforcePage</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="n">workforcePage</span><span class="p">.</span><span class="n">ClickEllipsisUnderBanner</span><span class="p">();</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="managesupervision"><strong>ManageSupervision</strong></h4>
+<hr />
+<p>The <code>ManageSupervision</code> method is used to manage the supervision details for a candidate and their supervisor. It performs actions based on the current URL and the profile details of the candidate and supervisor.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:4"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><input id="__tabbed_18_3" name="__tabbed_18" type="radio" /><input id="__tabbed_18_4" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Method Signature</label><label for="__tabbed_18_2">Parameters</label><label for="__tabbed_18_3">Functionality</label><label for="__tabbed_18_4">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ManageSupervision</span><span class="p">(</span><span class="n">OnboardDetails</span><span class="w"> </span><span class="n">candidateDetails</span><span class="p">,</span><span class="w"> </span><span class="n">OnboardDetails</span><span class="w"> </span><span class="n">supervisorDetails</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>candidateDetails</code></td>
+<td><a href="../onboard-page/#onboarddetails"><code>OnboardDetails</code></a></td>
+<td>The details of the candidate to manage supervision for.</td>
+</tr>
+<tr>
+<td><code>supervisorDetails</code></td>
+<td><a href="../onboard-page/#onboarddetails"><code>OnboardDetails</code></a></td>
+<td>The details of the supervisor to manage supervision for.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Check Current URL:<ul>
+<li>If the URL contains "/app/profile", it assumes the user is on a profile page.</li>
+</ul>
+</li>
+<li>Manage Supervision on Profile Page:<ul>
+<li>Click the ellipsis menu if visible.</li>
+<li>Wait for and click the "Manage Role" button.</li>
+<li>Check if the current profile matches the candidate's name:<ul>
+<li>If yes, add the supervisor to the candidate.</li>
+<li>If the current profile matches the supervisor's name:<ul>
+<li>Add the candidate as a subordinate to the supervisor.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Manage Supervision in Other Scenarios:<ul>
+<li>If not on the profile page, manage roles directly.</li>
+<li>Add the candidate to the supervisor's list.</li>
+</ul>
+</li>
+<li>Save Changes:<ul>
+<li>Wait for the "Save" button to be clickable and then click it to save the changes.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">WorkforcePage</span><span class="w"> </span><span class="n">workforcePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WorkforcePage</span><span class="p">(</span><span class="n">driver</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="n">workforcePage</span><span class="p">.</span><span class="n">ManageSupervision</span><span class="p">(</span><span class="n">candidateDetails</span><span class="p">,</span><span class="w"> </span><span class="n">supervisorDetails</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.top", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>

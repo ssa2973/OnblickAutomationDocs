@@ -1,0 +1,3053 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../login-page/">
+      
+      
+        <link rel="next" href="../settings-page/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>OnboardPage - Onblick Automation Reference Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#onboardpage" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Onblick Automation Reference Guide" class="md-header__button md-logo" aria-label="Onblick Automation Reference Guide" data-md-component="logo">
+      
+  <img src="../assets/images/onblick-logo.gif" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Onblick Automation Reference Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OnboardPage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Onblick Automation Reference Guide" class="md-nav__button md-logo" aria-label="Onblick Automation Reference Guide" data-md-component="logo">
+      
+  <img src="../assets/images/onblick-logo.gif" alt="logo">
+
+    </a>
+    Onblick Automation Reference Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Up the Environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building the solution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Proper Test Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Your First Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running-tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running Tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Understanding Pre-defined Utilities and Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Understanding Pre-defined Utilities and Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../attribute-extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AttributeExtensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browser-options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BrowserOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extent-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ExtentManager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login-creds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LoginCreds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports-generation-class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ReportsGenerationClass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-failure-context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SharedFailureContext
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soft-assertion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SoftAssertion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testexecution-helper/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TestExecutionHelper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../urls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    URLs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wait-helpers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WaitHelpers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_11" id="__nav_9_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    WebExtensions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_11">
+            <span class="md-nav__icon md-icon"></span>
+            WebExtensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webdriver-extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebDriverExtensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webelement-extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebElementExtensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Page Object Model (POM)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Page Object Model (POM)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pom-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pom-guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frequently Utilized POM Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            Frequently Utilized POM Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LoginPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    OnboardPage
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    OnboardPage
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onboarddetails" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnboardDetails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onboarddetailsmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnboardDetailsMap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Locators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#singleonboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      SingleOnboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloadmultionboardcsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      DownloadMultiOnboardCsv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writeonboarddetailstocsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      WriteOnboardDetailsToCsv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validateimporteddata" class="md-nav__link">
+    <span class="md-ellipsis">
+      ValidateImportedData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skipimport" class="md-nav__link">
+    <span class="md-ellipsis">
+      SkipImport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tryskipandvalidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      TrySkipAndValidate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploadcsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      UploadCsv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancelimport" class="md-nav__link">
+    <span class="md-ellipsis">
+      CancelImport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onboardcandidates" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnboardCandidates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editimporteddata" class="md-nav__link">
+    <span class="md-ellipsis">
+      EditImportedData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolveerrors" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResolveErrors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulkonboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      BulkOnboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulkonboardnegative" class="md-nav__link">
+    <span class="md-ellipsis">
+      BulkOnboardNegative
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SettingsPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workforce-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WorkforcePage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3_5" id="__nav_10_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MailPages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            MailPages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mailhog-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MailhogPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mailinator-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MailinatorPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maildrop-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaildropPage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with System Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vs-shortcuts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Must know Shortcuts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onboarddetails" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnboardDetails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onboarddetailsmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnboardDetailsMap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Locators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#singleonboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      SingleOnboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloadmultionboardcsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      DownloadMultiOnboardCsv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writeonboarddetailstocsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      WriteOnboardDetailsToCsv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validateimporteddata" class="md-nav__link">
+    <span class="md-ellipsis">
+      ValidateImportedData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skipimport" class="md-nav__link">
+    <span class="md-ellipsis">
+      SkipImport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tryskipandvalidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      TrySkipAndValidate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploadcsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      UploadCsv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancelimport" class="md-nav__link">
+    <span class="md-ellipsis">
+      CancelImport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onboardcandidates" class="md-nav__link">
+    <span class="md-ellipsis">
+      OnboardCandidates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editimporteddata" class="md-nav__link">
+    <span class="md-ellipsis">
+      EditImportedData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolveerrors" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResolveErrors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulkonboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      BulkOnboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulkonboardnegative" class="md-nav__link">
+    <span class="md-ellipsis">
+      BulkOnboardNegative
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="onboardpage">OnboardPage</h1>
+<p>The <code>OnboardPage</code> contains all the classes, locators and methods necessary to interact with the Onboard page.</p>
+<h2 id="members">Members</h2>
+<h3 id="classes"><strong>Classes</strong></h3>
+<p>The <code>OnboardPage</code> class contains the following classes:</p>
+<h4 id="onboarddetails"><strong>OnboardDetails</strong></h4>
+<hr />
+<p>The <code>OnboardDetails</code> class is designed to hold and manage employee onboarding information. It encapsulates various personal and employment-related details for an employee.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Constructor</label><label for="__tabbed_1_2">Parameters</label><label for="__tabbed_1_3">Properties</label><label for="__tabbed_1_4">Constructor Logic</label><label for="__tabbed_1_5">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="nf">OnboardDetails</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">taxTerms</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">firstName</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">lastName</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">designation</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">email</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">phone</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">employmentType</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">employeeID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">dob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">address1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">address2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">zip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">startDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">workAuthType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="kt">bool?</span><span class="w"> </span><span class="n">isBilling</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">wageRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">wageFrom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">wageTo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">wageCycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">department</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">reportingTo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="kt">bool?</span><span class="w"> </span><span class="n">isTrainee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>taxTerms</code></td>
+<td><code>string</code></td>
+<td>The tax terms under which the employee is employed.</td>
+</tr>
+<tr>
+<td><code>firstName</code></td>
+<td><code>string</code></td>
+<td>The first name of the employee.</td>
+</tr>
+<tr>
+<td><code>lastName</code></td>
+<td><code>string</code></td>
+<td>The last name of the employee.</td>
+</tr>
+<tr>
+<td><code>designation</code></td>
+<td><code>string</code></td>
+<td>The job title or designation of the employee.</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td><code>string</code></td>
+<td>The email address of the employee.</td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td><code>string</code></td>
+<td>The phone number of the employee.</td>
+</tr>
+<tr>
+<td><code>employmentType</code></td>
+<td><code>string</code></td>
+<td>The type of employment (e.g., full-time, part-time).</td>
+</tr>
+<tr>
+<td><code>employeeID</code></td>
+<td><code>string</code></td>
+<td>The unique identifier for the employee. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>dob</code></td>
+<td><code>string</code></td>
+<td>The date of birth of the employee. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>gender</code> (optional)</td>
+<td><code>string</code></td>
+<td>The gender of the employee. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>address1</code> (optional)</td>
+<td><code>string</code></td>
+<td>The primary address line of the employee. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>address2</code> (optional)</td>
+<td><code>string</code></td>
+<td>The secondary address line of the employee. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>city</code> (optional)</td>
+<td><code>string</code></td>
+<td>The city of the employee's address. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>state</code> (optional)</td>
+<td><code>string</code></td>
+<td>The state of the employee's address. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>zip</code> (optional)</td>
+<td><code>string</code></td>
+<td>The ZIP code of the employee's address. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>startDate</code> (optional)</td>
+<td><code>string</code></td>
+<td>The start date of employment or contract. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>workAuthType</code> (optional)</td>
+<td><code>string</code></td>
+<td>The type of work authorization the employee has. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>isBilling</code> (optional)</td>
+<td><code>bool?</code></td>
+<td>Indicates if the employee is billable. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>wageRate</code> (optional)</td>
+<td><code>string</code></td>
+<td>The wage rate of the employee. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>wageFrom</code> (optional)</td>
+<td><code>string</code></td>
+<td>The minimum wage rate of the employee. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>wageTo</code> (optional)</td>
+<td><code>string</code></td>
+<td>The maximum wage rate of the employee. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>wageCycle</code> (optional)</td>
+<td><code>string</code></td>
+<td>The wage cycle (e.g., weekly, bi-weekly). Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>department</code> (optional)</td>
+<td><code>string</code></td>
+<td>The department to which the employee belongs. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>reportingTo</code> (optional)</td>
+<td><code>string</code></td>
+<td>The supervisor or manager the employee reports to. Default is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>isTrainee</code> (optional)</td>
+<td><code>bool?</code></td>
+<td>Indicates if the employee is a trainee. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FirstName</code></td>
+<td><code>string</code></td>
+<td>The first name of the employee.</td>
+</tr>
+<tr>
+<td><code>LastName</code></td>
+<td><code>string</code></td>
+<td>The last name of the employee.</td>
+</tr>
+<tr>
+<td><code>Designation</code></td>
+<td><code>string</code></td>
+<td>The job title or designation of the employee.</td>
+</tr>
+<tr>
+<td><code>EmployeeID</code></td>
+<td><code>string</code></td>
+<td>The unique identifier for the employee.</td>
+</tr>
+<tr>
+<td><code>Email</code></td>
+<td><code>string</code></td>
+<td>The email address of the employee.</td>
+</tr>
+<tr>
+<td><code>Phone</code></td>
+<td><code>string</code></td>
+<td>The phone number of the employee.</td>
+</tr>
+<tr>
+<td><code>Dob</code></td>
+<td><code>string</code></td>
+<td>The date of birth of the employee.</td>
+</tr>
+<tr>
+<td><code>Gender</code></td>
+<td><code>string</code></td>
+<td>The gender of the employee.</td>
+</tr>
+<tr>
+<td><code>Address1</code></td>
+<td><code>string</code></td>
+<td>The primary address line of the employee.</td>
+</tr>
+<tr>
+<td><code>Address2</code></td>
+<td><code>string</code></td>
+<td>The secondary address line of the employee.</td>
+</tr>
+<tr>
+<td><code>City</code></td>
+<td><code>string</code></td>
+<td>The city of the employee's address.</td>
+</tr>
+<tr>
+<td><code>State</code></td>
+<td><code>string</code></td>
+<td>The state of the employee's address.</td>
+</tr>
+<tr>
+<td><code>Zip</code></td>
+<td><code>string</code></td>
+<td>The ZIP code of the employee's address.</td>
+</tr>
+<tr>
+<td><code>EmploymentType</code></td>
+<td><code>string</code></td>
+<td>The type of employment (e.g., full-time, part-time).</td>
+</tr>
+<tr>
+<td><code>TaxTerms</code></td>
+<td><code>string</code></td>
+<td>The tax terms under which the employee is employed (e.g., W2, C2C, 1099).</td>
+</tr>
+<tr>
+<td><code>EmploymentStartDate</code></td>
+<td><code>string</code></td>
+<td>The start date of employment for W2 employees.</td>
+</tr>
+<tr>
+<td><code>ContractStartDate</code></td>
+<td><code>string</code></td>
+<td>The start date of contract for C2C or 1099 employees.</td>
+</tr>
+<tr>
+<td><code>WorkAuthType</code></td>
+<td><code>string</code></td>
+<td>The type of work authorization the employee has.</td>
+</tr>
+<tr>
+<td><code>IsBilling</code></td>
+<td><code>bool</code></td>
+<td>Indicates if the employee is billable.</td>
+</tr>
+<tr>
+<td><code>WageRate</code></td>
+<td><code>string</code></td>
+<td>The wage rate of the employee.</td>
+</tr>
+<tr>
+<td><code>WageFrom</code></td>
+<td><code>string</code></td>
+<td>The minimum wage rate of the employee.</td>
+</tr>
+<tr>
+<td><code>WageTo</code></td>
+<td><code>string</code></td>
+<td>The maximum wage rate of the employee.</td>
+</tr>
+<tr>
+<td><code>WageCycle</code></td>
+<td><code>string</code></td>
+<td>The wage cycle (e.g., weekly, bi-weekly).</td>
+</tr>
+<tr>
+<td><code>Department</code></td>
+<td><code>string</code></td>
+<td>The department to which the employee belongs.</td>
+</tr>
+<tr>
+<td><code>ReportingTo</code></td>
+<td><code>string</code></td>
+<td>The supervisor or manager the employee reports to.</td>
+</tr>
+<tr>
+<td><code>IsTrainee</code></td>
+<td><code>bool</code></td>
+<td>Indicates if the employee is a trainee.</td>
+</tr>
+<tr>
+<td><code>IsTraineeText</code></td>
+<td><code>string</code></td>
+<td>A textual representation of whether the employee is a trainee ("y" for yes, "n" for no).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Initializes properties with provided values.</li>
+<li>Sets <code>EmploymentStartDate</code> or <code>ContractStartDate</code> based on <code>TaxTerms</code>.</li>
+<li>Determines <code>IsTrainee</code> based on <code>TaxTerms</code> and <code>WorkAuthType</code>.</li>
+<li>Sets <code>IsTraineeText</code> based on <code>IsTrainee</code> and <code>TaxTerms</code>.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">onboardDetails</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OnboardDetails</span><span class="p">(</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">taxTerms</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;W2&quot;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">firstName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">lastName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Doe&quot;</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">designation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Software Engineer&quot;</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">email</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">phone</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;123-456-7890&quot;</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">employmentType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Full-Time&quot;</span><span class="p">,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">startDate</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2023-01-01&quot;</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="n">workAuthType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;US Citizen&quot;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="onboarddetailsmap">OnboardDetailsMap</h4>
+<hr />
+<p>The <code>OnboardDetailsMap</code> class is a mapping configuration for the <code>OnboardDetails</code> class. It is used to map CSV columns to the properties of the <code>OnboardDetails</code> class using the <code>CsvHelper</code> library.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Constructor</label><label for="__tabbed_2_2">Mapped Properties</label><label for="__tabbed_2_3">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OnboardDetailsMap</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ClassMap</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">OnboardDetailsMap</span><span class="p">()</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">FirstName</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;First Name*&quot;</span><span class="p">);</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">LastName</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Last Name*&quot;</span><span class="p">);</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">Designation</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Designation*&quot;</span><span class="p">);</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">EmployeeID</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Employee ID&quot;</span><span class="p">);</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">Dob</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Date of Birth&quot;</span><span class="p">).</span><span class="n">TypeConverterOption</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;M/d/yyyy&quot;</span><span class="p">);</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">Gender</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Gender&quot;</span><span class="p">);</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">Phone</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Phone Number*&quot;</span><span class="p">);</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">Email</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Email ID*&quot;</span><span class="p">);</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">EmploymentType</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Employment Type*&quot;</span><span class="p">);</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">EmploymentStartDate</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Employment Start Date+&quot;</span><span class="p">).</span><span class="n">TypeConverterOption</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;M/d/yyyy&quot;</span><span class="p">);</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">ContractStartDate</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Contract Start Date+&quot;</span><span class="p">).</span><span class="n">TypeConverterOption</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;M/d/yyyy&quot;</span><span class="p">);</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">Address1</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Address Line 1&quot;</span><span class="p">);</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">Address2</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Address Line 2&quot;</span><span class="p">);</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">City</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;City&quot;</span><span class="p">);</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">State</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;State&quot;</span><span class="p">);</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">Zip</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Zip Code&quot;</span><span class="p">);</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">TaxTerms</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Tax Terms*&quot;</span><span class="p">);</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">WorkAuthType</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Work Authorization Type+&quot;</span><span class="p">);</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">WageRate</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Wage Rate (Offered Salary)&quot;</span><span class="p">);</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">WageCycle</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Wage Cycle&quot;</span><span class="p">);</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">Department</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Department&quot;</span><span class="p">);</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">ReportingTo</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;Reporting To Email&quot;</span><span class="p">);</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">        </span><span class="n">Map</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">IsTraineeText</span><span class="p">).</span><span class="n">Name</span><span class="p">(</span><span class="s">&quot;IsTrainee&quot;</span><span class="p">);</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>CSV Column</th>
+<th>Property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First Name*</td>
+<td><code>FirstName</code></td>
+</tr>
+<tr>
+<td>Last Name*</td>
+<td><code>LastName</code></td>
+</tr>
+<tr>
+<td>Designation*</td>
+<td><code>Designation</code></td>
+</tr>
+<tr>
+<td>Employee ID</td>
+<td><code>EmployeeID</code></td>
+</tr>
+<tr>
+<td>Date of Birth</td>
+<td><code>Dob</code></td>
+</tr>
+<tr>
+<td>Gender</td>
+<td><code>Gender</code></td>
+</tr>
+<tr>
+<td>Phone Number*</td>
+<td><code>Phone</code></td>
+</tr>
+<tr>
+<td>Email ID*</td>
+<td><code>Email</code></td>
+</tr>
+<tr>
+<td>Employment Type*</td>
+<td><code>EmploymentType</code></td>
+</tr>
+<tr>
+<td>Employment Start Date+</td>
+<td><code>EmploymentStartDate</code></td>
+</tr>
+<tr>
+<td>Contract Start Date+</td>
+<td><code>ContractStartDate</code></td>
+</tr>
+<tr>
+<td>Address Line 1</td>
+<td><code>Address1</code></td>
+</tr>
+<tr>
+<td>Address Line 2</td>
+<td><code>Address2</code></td>
+</tr>
+<tr>
+<td>City</td>
+<td><code>City</code></td>
+</tr>
+<tr>
+<td>State</td>
+<td><code>State</code></td>
+</tr>
+<tr>
+<td>Zip Code</td>
+<td><code>Zip</code></td>
+</tr>
+<tr>
+<td>Tax Terms*</td>
+<td><code>TaxTerms</code></td>
+</tr>
+<tr>
+<td>Work Authorization Type+</td>
+<td><code>WorkAuthType</code></td>
+</tr>
+<tr>
+<td>Wage Rate (Offered Salary)</td>
+<td><code>WageRate</code></td>
+</tr>
+<tr>
+<td>Wage Cycle</td>
+<td><code>WageCycle</code></td>
+</tr>
+<tr>
+<td>Department</td>
+<td><code>Department</code></td>
+</tr>
+<tr>
+<td>Reporting To Email</td>
+<td><code>ReportingTo</code></td>
+</tr>
+<tr>
+<td>IsTrainee</td>
+<td><code>IsTraineeText</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p><div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">CsvHelper</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">CsvHelper.Configuration</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Globalization</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">{</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StreamReader</span><span class="p">(</span><span class="s">&quot;path/to/your/csvfile.csv&quot;</span><span class="p">))</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">csv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CsvReader</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CsvConfiguration</span><span class="p">(</span><span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">)</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">            </span><span class="n">Delimiter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="p">,</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">            </span><span class="n">HasHeaderRecord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">,</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="p">}))</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">            </span><span class="n">csv</span><span class="p">.</span><span class="n">Context</span><span class="p">.</span><span class="n">RegisterClassMap</span><span class="o">&lt;</span><span class="n">OnboardDetailsMap</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csv</span><span class="p">.</span><span class="n">GetRecords</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="p">().</span><span class="n">ToList</span><span class="p">();</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">            </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">record</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">records</span><span class="p">)</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;First Name: {record.FirstName}, Last Name: {record.LastName}&quot;</span><span class="p">);</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="p">}</span>
+</span></code></pre></div>
+<em>Note: This is only an example implementation on how to use it. This <code>ClassMap</code> is already used in <a href="#bulkonboard"><code>BulkOnboard</code></a> functionality</em>.</p>
+</div>
+</div>
+</div>
+<h3 id="locators"><strong>Locators</strong></h3>
+<hr />
+<p>The locators used in the <code>OnboardPage</code> class aren't disclosed here, you can go through the <code>OnboardPage.cs</code> file in the project to view the locators. All locator members are of two types <code>By</code> and <code>IWebElement</code>(using <code>PageObjectFactory</code>).</p>
+<h3 id="methods"><strong>Methods</strong></h3>
+<hr />
+<p>There are several methods in the <code>OnboardPage</code> class that are used to interact with the Onboard page. Some of the methods are private and some are public, italicized methods are private methods.</p>
+<h4 id="singleonboard"><strong>SingleOnboard</strong></h4>
+<hr />
+<p>The <code>SingleOnboard</code> method is designed to onboard a single employee using the details provided in an <a href="#onboarddetails"><code>OnboardDetails</code></a> type object.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Method Signature</label><label for="__tabbed_3_2">Parameters</label><label for="__tabbed_3_3">Functionality</label><label for="__tabbed_3_4">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SingleOnboard</span><span class="p">(</span><span class="n">OnboardDetails</span><span class="w"> </span><span class="n">onboardDetails</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboardDetails</code></td>
+<td><code>OnboardDetails</code></td>
+<td>The employee details to onboard.</td>
+</tr>
+<tr>
+<td><code>nodeName</code> (optional)</td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Initialization</strong>: Sets <code>nodeName</code> to "Onboard" if it is null. Extracts individual properties from the <code>onboardDetails</code> object.</li>
+<li><strong>Navigation</strong>: Navigates to the single onboard URL.</li>
+<li><strong>Input </strong>Fields: Fills in the input fields with the provided employee details.</li>
+<li><strong>Logging</strong>: Logs each substep to the report to provide detailed feedback on the progress of the onboarding process.</li>
+<li><strong>Submission</strong>: Clicks the onboard button to submit the form.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">onboardDetails</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OnboardDetails</span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">taxTerms</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;W2&quot;</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">firstName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Jane&quot;</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">lastName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Doe&quot;</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">designation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Software Engineer&quot;</span><span class="p">,</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">email</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;jane.doe@example.com&quot;</span><span class="p">,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">phone</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;123-456-7890&quot;</span><span class="p">,</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">employmentType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Full-Time&quot;</span><span class="p">,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="n">startDate</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2023-01-01&quot;</span><span class="p">,</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="n">workAuthType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Citizen&quot;</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">);</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="n">SingleOnboard</span><span class="p">(</span><span class="n">onboardDetails</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="downloadmultionboardcsv"><strong><em>DownloadMultiOnboardCsv</em></strong></h4>
+<hr />
+<p>The <code>DownloadMultiOnboardCsv</code> method navigates to the bulk onboarding URL, downloads a CSV file for multiple onboardings, and returns the path of the downloaded file.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Method Signature</label><label for="__tabbed_4_2">Parameters</label><label for="__tabbed_4_3">Functionality</label><label for="__tabbed_4_4">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">DownloadMultiOnboardCsv</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nodeName</code> (optional)</td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Navigation</strong>: Navigates to the bulk onboard URL.</li>
+<li><strong>Initialization</strong>: Determines the download path and initial file count in the directory.</li>
+<li><strong>Download CSV</strong>: Clicks the download button for the bulk onboarding CSV.</li>
+<li><strong>Wait for Download</strong>: Waits for the download to complete and retrieves the latest downloaded file.</li>
+<li><strong>File Validation</strong>: Ensures the downloaded file is not a temporary or incomplete file.</li>
+<li><strong>Return File Path</strong>: Returns the full path of the downloaded file.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">downloadedCsvPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DownloadMultiOnboardCsv</span><span class="p">(</span><span class="s">&quot;BulkOnboard&quot;</span><span class="p">);</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;Downloaded CSV path: {downloadedCsvPath}&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="writeonboarddetailstocsv"><strong><em>WriteOnboardDetailsToCsv</em></strong></h4>
+<hr />
+<p>The <code>WriteOnboardDetailsToCsv</code> method writes a list of <code>OnboardDetails</code> objects to a CSV file. The method can either create a new CSV file or overwrite an existing one.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Method Signature</label><label for="__tabbed_5_2">Parameters</label><label for="__tabbed_5_3">Functionality</label><label for="__tabbed_5_4">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">WriteOnboardDetailsToCsv</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">filePath</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filePath</code></td>
+<td><code>string</code></td>
+<td>The path of the CSV file to write the onboard details to.</td>
+</tr>
+<tr>
+<td><code>onboardDetailsList</code></td>
+<td><code>List&lt;OnboardDetails&gt;</code></td>
+<td>The list of employee details to write to the CSV file.</td>
+</tr>
+<tr>
+<td><code>nodeName</code> (optional)</td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Open/Create CSV File</strong>:<ul>
+<li>Opens the file at filePath for reading and writing, allowing shared access for reading and writing.</li>
+<li>Uses a StreamWriter to write to the file.</li>
+<li>Uses CsvWriter from the CsvHelper library to handle CSV writing with the specified culture (CultureInfo.InvariantCulture).</li>
+</ul>
+</li>
+<li><strong>Register Class Map and Write Header</strong>:<ul>
+<li>Registers the OnboardDetailsMap class map to define the CSV column mappings.</li>
+<li>Writes the header row for the OnboardDetails class.</li>
+<li>Moves to the next record to begin writing data rows.</li>
+</ul>
+</li>
+<li><strong>Write Onboard Details</strong>:<ul>
+<li>Writes each OnboardDetails object in onboardDetailsList to the CSV file.</li>
+</ul>
+</li>
+<li><strong>Exception Handling</strong>:<ul>
+<li>Catches any exceptions that may occur and handles them appropriately (e.g., logging the exception).</li>
+</ul>
+</li>
+<li>Return File Path:<ul>
+<li>Returns the path of the CSV file after writing is complete.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">{</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="nf">OnboardDetails</span><span class="p">(</span><span class="s">&quot;W2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Doe&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Developer&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;john.doe@example.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1234567890&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Full-Time&quot;</span><span class="p">),</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="nf">OnboardDetails</span><span class="p">(</span><span class="s">&quot;C2C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jane&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Smith&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Manager&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;jane.smith@example.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;0987654321&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Contractor&quot;</span><span class="p">)</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">};</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="kt">string</span><span class="w"> </span><span class="n">filePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;path/to/onboard_details.csv&quot;</span><span class="p">;</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="kt">string</span><span class="w"> </span><span class="n">resultFilePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WriteOnboardDetailsToCsv</span><span class="p">(</span><span class="n">filePath</span><span class="p">,</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;OnboardDetailsWrite&quot;</span><span class="p">);</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;CSV file written to: {resultFilePath}&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="validateimporteddata"><strong><em>ValidateImportedData</em></strong></h4>
+<hr />
+<p>The <code>ValidateImportedData</code> method validates the details of onboarded candidates from a provided list against the data displayed on a web page. It performs the validation by comparing the data in the <code>OnboardDetails</code> objects to the corresponding elements on the web page.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Method Signature</label><label for="__tabbed_6_2">Parameters</label><label for="__tabbed_6_3">Functionality</label><label for="__tabbed_6_4">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ValidateImportedData</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboardDetailsList</code></td>
+<td><code>List&lt;OnboardDetails&gt;</code></td>
+<td>The list of employee details to validate.</td>
+</tr>
+<tr>
+<td><code>nodeName</code> (optional)</td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Define Index Mappings:<ul>
+<li>Defines the index positions for various fields in the table on the web page.</li>
+</ul>
+</li>
+<li>Dynamic Locators:<ul>
+<li>Defines <code>dynamicLocatorFixed</code> and <code>dynamicLocator</code> methods to generate XPath locators for table cells.</li>
+</ul>
+</li>
+<li>Validation Loop:<ul>
+<li>Iterates through each <code>OnboardDetails</code> object in the list.</li>
+<li>Generates the XPath locators for the corresponding fields.</li>
+<li>Validates each field (e.g., <code>FirstName</code>, <code>LastName</code>, <code>Designation</code>, etc.) by comparing the text in the web element to the value in the <code>OnboardDetails</code> object.</li>
+<li>Scrolls to and highlights the element before validation for visual verification.</li>
+<li>Unhighlights the element after validation.</li>
+</ul>
+</li>
+<li>Special Handling:<ul>
+<li>For <code>Gender</code>, checks if the value is "I choose not to disclose" and validates accordingly.</li>
+<li>For <code>EmploymentStartDate</code> vs. <code>ContractStartDate</code>, chooses the correct field based on the <code>TaxTerms</code>.</li>
+<li>For <code>IsTrainee</code>, sets the expected value based on conditions and validates it.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="p">{</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="nf">OnboardDetails</span><span class="p">(</span><span class="s">&quot;W2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Doe&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Developer&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;john.doe@example.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1234567890&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Full-Time&quot;</span><span class="p">),</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="nf">OnboardDetails</span><span class="p">(</span><span class="s">&quot;C2C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jane&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Smith&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Manager&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;jane.smith@example.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;0987654321&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Contractor&quot;</span><span class="p">)</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">};</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">ValidateImportedData</span><span class="p">(</span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;OnboardDetailsValidation&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="skipimport"><strong><em>SkipImport</em></strong></h4>
+<hr />
+<p>The <code>SkipImport</code> method processes a list of onboarded candidate details, identifies any failed or duplicate records, and skips their import. This method interacts with web elements to resolve conflicts and update the list of onboard details accordingly.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:5"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><input id="__tabbed_7_4" name="__tabbed_7" type="radio" /><input id="__tabbed_7_5" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Method Signature</label><label for="__tabbed_7_2">Parameters</label><label for="__tabbed_7_3">Returns</label><label for="__tabbed_7_4">Functionality</label><label for="__tabbed_7_5">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SkipImport</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboardDetailsList</code></td>
+<td><code>List&lt;OnboardDetails&gt;</code></td>
+<td>The list of employee details to validate.</td>
+</tr>
+<tr>
+<td><code>nodeName</code> (optional)</td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>A list of <code>OnboardDetails</code> objects that are ready for import after resolving any conflicts.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Define Element Locators:<ul>
+<li><code>emailColumnLocator</code>: Locator for the email column in the table.</li>
+<li><code>UploadCsvResolveNowBtn</code>, <code>SkipImportBtnId()</code>, <code>SkipImportProceedBtnId()</code>: Locators for buttons involved in the process.</li>
+</ul>
+</li>
+<li>Initialize List:<ul>
+<li><code>failedOrDuplicateDetailsList</code>: List to store details of failed or duplicate records.</li>
+</ul>
+</li>
+<li>Wait and Click:<ul>
+<li>Waits for the <code>UploadCsvResolveNowBtn</code> to become clickable. If it times out, the method skips to the end.</li>
+<li>Clicks the resolve button (<code>resolveNowBtn</code>).</li>
+<li>Waits for the invisibility of the <code>OnblickLogoId</code> element to ensure the page has updated.</li>
+</ul>
+</li>
+<li>Email Comparison:<ul>
+<li>Finds all elements in the email column.</li>
+<li>Iterates through the emails and compares each with the emails in the <code>onboardDetailsList</code>.</li>
+<li>Adds matching records to the <code>failedOrDuplicateDetailsList</code>.</li>
+</ul>
+</li>
+<li>Update List:<ul>
+<li>Removes the failed or duplicate records from the <code>onboardDetailsList</code>.</li>
+</ul>
+</li>
+<li>Additional Clicking and Logging:<ul>
+<li>Waits for the skip import button to become clickable, clicks it, and then clicks the proceed button.</li>
+<li>Logs the substep indicating the import was skipped for failed/duplicate records.</li>
+<li>Waits for the invisibility of the <code>OnblickLogoId</code> element.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used in the <a href="#tryskipandvalidate"><code>TrySkipAndValidate</code></a> method.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* list of onboard details*/</span><span class="p">;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">onboardDetailsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SkipImport</span><span class="p">(</span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SkipImportNode&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="tryskipandvalidate"><strong><em>TrySkipAndValidate</em></strong></h4>
+<hr />
+<p>The <code>TrySkipAndValidate</code> method processes a list of <code>OnboardDetails</code> by first skipping the import of failed or duplicate records and then validating the imported data. This ensures that the onboarded data is accurate and free of conflicts. Uses both <a href="#skipimport"><code>SkipImport</code></a> and <a href="#validateimporteddata"><code>ValidateImportedData</code></a> methods.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:4"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><input id="__tabbed_8_4" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Method Signature</label><label for="__tabbed_8_2">Parameters</label><label for="__tabbed_8_3">Returns</label><label for="__tabbed_8_4">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">TrySkipAndValidate</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboardDetailsList</code></td>
+<td><code>List&lt;OnboardDetails&gt;</code></td>
+<td>The list of employee details to validate.</td>
+</tr>
+<tr>
+<td><code>nodeName</code> (optional)</td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>A list of <code>OnboardDetails</code> objects that have been successfully imported and validated.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Skip Import</strong>:<ul>
+<li>Calls the <a href="#skipimport"><code>SkipImport</code></a> method to skip the import of failed or duplicate records.</li>
+</ul>
+</li>
+<li><strong>Validate Imported Data</strong>:<ul>
+<li>Calls the <a href="#validateimporteddata"><code>ValidateImportedData</code></a> method to validate the imported data.</li>
+</ul>
+</li>
+<li><strong>Return List</strong>:<ul>
+<li>Returns the updated list of onboard details after skipping and validation.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h4 id="uploadcsv"><strong><em>UploadCsv</em></strong></h4>
+<hr />
+<p>The <code>UploadCsv</code> method is responsible for uploading a CSV file containing onboarding details to the web application, navigating through the upload process, and ensuring the completion of the upload.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:4"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><input id="__tabbed_9_4" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Method Signature</label><label for="__tabbed_9_2">Parameters</label><label for="__tabbed_9_3">Functionality</label><label for="__tabbed_9_4">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">UploadCsv</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">filePath</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filePath</code></td>
+<td><code>string</code></td>
+<td>The path of the CSV file to upload.</td>
+</tr>
+<tr>
+<td><code>nodeName</code> (optional)</td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Navigate to Bulk Onboard URL:<ul>
+<li>Checks if the current URL is the bulk onboarding URL. If not, it navigates to the correct URL.</li>
+</ul>
+</li>
+<li>Upload CSV File:<ul>
+<li>Waits for the CSV upload element to exist.</li>
+<li>Uploads the CSV file using the SendKeys method.</li>
+</ul>
+</li>
+<li>Navigate Through Upload Process:<ul>
+<li>Waits for the "Next" button to be clickable and clicks it.</li>
+<li>Waits for the OnBlick logo to become invisible.</li>
+<li>Checks if the onboard candidates label is displayed and refreshes the page until it's not visible.</li>
+</ul>
+</li>
+<li>Handle Upload Completion:<ul>
+<li>Waits for the "Go to Uploads" button to be clickable and clicks it.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">csvFilePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;C:\path\to\your\csvfile.csv&quot;</span><span class="p">;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">UploadCsv</span><span class="p">(</span><span class="n">csvFilePath</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Upload Csv&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="cancelimport"><strong><em>CancelImport</em></strong></h4>
+<hr />
+<p>The <code>CancelImport</code> method cancels the import process of a CSV file containing onboarding details. It interacts with web elements to cancel the import process and ensures the process is successfully canceled.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Method Signature</label><label for="__tabbed_10_2">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">CancelImport</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Ensures the "Cancel" button for the CSV upload is clickable.</li>
+<li>Clicks the "Cancel" button to initiate the cancellation process.</li>
+<li>Ensures the confirmation buttons are clickable.</li>
+<li>Clicks the "No" button to dismiss the first confirmation dialog.</li>
+<li>Clicks the "Cancel" button again to retry the cancellation.</li>
+<li>Clicks the "Yes" button to confirm the cancellation.</li>
+<li>Waits for the OnBlick logo to become invisible, indicating that the cancellation is complete.</li>
+</ol>
+</div>
+</div>
+</div>
+<h4 id="onboardcandidates"><strong><em>OnboardCandidates</em></strong></h4>
+<hr />
+<p>The <code>OnboardCandidates</code> method is used to onboard a selected set of candidates in the web application. It performs actions to select all candidate records and initiate the onboarding process, and then waits for a success popup to appear.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Method Signature</label><label for="__tabbed_11_2">Functionality</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnboardCandidates</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Select All Candidates:<ul>
+<li>Waits for the "Select All" checkbox to be clickable and clicks it.</li>
+</ul>
+</li>
+<li>Initiate Onboarding:<ul>
+<li>Waits for the "Onboard" button to be clickable and clicks it.</li>
+</ul>
+</li>
+<li>Wait for Success Popup:<ul>
+<li>Waits for the success popup to appear, indicating that the onboarding process has been initiated.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h4 id="editimporteddata"><strong><em>EditImportedData</em></strong></h4>
+<hr />
+<p>The <code>EditImportedData</code> method is used to edit the details of an imported candidate in the web application. It selects a candidate, clicks on edit, updates the details, and saves the changes.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:5"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><input id="__tabbed_12_4" name="__tabbed_12" type="radio" /><input id="__tabbed_12_5" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Method Signature</label><label for="__tabbed_12_2">Parameters</label><label for="__tabbed_12_3">Returns</label><label for="__tabbed_12_4">Functionality</label><label for="__tabbed_12_5">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">EditImportedData</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboardDetailsList</code></td>
+<td><code>List&lt;OnboardDetails&gt;</code></td>
+<td>The list of employee details to validate.</td>
+</tr>
+<tr>
+<td><code>nodeName</code> (optional)</td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>A list of <code>OnboardDetails</code> objects that have been successfully edited.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Initialize Variables:<ul>
+<li>Define locators for modal buttons, fields, and record colors.</li>
+<li>Create a list to hold records with duplicate issues and initialize an updated list of onboard details.</li>
+</ul>
+</li>
+<li>Identify and Delete Duplicate Records:<ul>
+<li>Find records with a specific background color indicating duplication.</li>
+<li>For each duplicate record:<ul>
+<li>Locate the delete button and the email address.</li>
+<li>Delete the record by clicking the "Delete" button and confirm the action.</li>
+<li>Remove the deleted record from the list and log the action.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Edit or Delete Records:<ul>
+<li>For each record in the onboard details list:</li>
+<li>Randomly decide whether to edit or delete the record.</li>
+<li>Perform actions based on the decision:<ul>
+<li>Edit:<ul>
+<li>Open the edit modal, perform necessary changes, and save the changes.</li>
+<li>If the record's gender is "I choose not to disclose", handle it with a specific select element.</li>
+<li>Handle missing mandatory fields by selecting options or typing in values.</li>
+</ul>
+</li>
+<li>Delete:<ul>
+<li>Open the delete modal, click "No" to cancel, and then click "Delete" to confirm.</li>
+<li>Remove the deleted record from the list and log the action.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Return Updated List:<ul>
+<li>Return the updated list of onboard details.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used in the <a href="#resolveerrors"><code>ResolveErrors</code></a> method.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* list of onboard details*/</span><span class="p">;</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">onboardDetailsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EditImportedData</span><span class="p">(</span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;EditImportedDataNode&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="resolveerrors"><strong><em>ResolveErrors</em></strong></h4>
+<hr />
+<p>The ResolveErrors method aims to handle errors in the onboarding process by clicking the "Resolve Now" button and then editing the imported data using <a href="#editimporteddata"><code>EditImportedData</code></a> to resolve any issues. This method returns the updated list of onboard details after making necessary adjustments.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:5"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><input id="__tabbed_13_3" name="__tabbed_13" type="radio" /><input id="__tabbed_13_4" name="__tabbed_13" type="radio" /><input id="__tabbed_13_5" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Method Signature</label><label for="__tabbed_13_2">Parameters</label><label for="__tabbed_13_3">Returns</label><label for="__tabbed_13_4">Functionality</label><label for="__tabbed_13_5">Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ResolveErrors</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboardDetailsList</code></td>
+<td><code>List&lt;OnboardDetails&gt;</code></td>
+<td>The list of employee details to validate.</td>
+</tr>
+<tr>
+<td><code>nodeName</code> (optional)</td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>A list of <code>OnboardDetails</code> objects that have been successfully resolved.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Handle Resolve Now Button</strong>:<ul>
+<li>Waits for the "Resolve Now" button to be clickable and clicks it.</li>
+<li>Waits for the OnBlick logo to become invisible, indicating the page has updated.</li>
+</ul>
+</li>
+<li><strong>Edit Imported Data</strong>:<ul>
+<li>Calls the <a href="#editimporteddata"><code>EditImportedData</code></a> method to edit the imported data.</li>
+</ul>
+</li>
+<li><strong>Return Updated List</strong>:<ul>
+<li>Returns the updated list of onboard details after resolving errors.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>This method is used in the <a href="#bulkonboardnegative"><code>BulkOnboardNegative</code></a> method.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* list of onboard details*/</span><span class="p">;</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n">onboardDetailsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ResolveErrors</span><span class="p">(</span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ResolveErrorsNode&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="bulkonboard"><strong>BulkOnboard</strong></h4>
+<hr />
+<p>The <code>BulkOnboard</code> method is used to perform bulk onboarding of candidates by uploading a CSV file containing their details. It interacts with web elements to upload the CSV file, resolve any conflicts, and validate the imported data. Tihs method uses the <a href="#downloadmultionboardcsv"><code>DownloadMultiOnboardCsv</code></a>, <a href="#writeonboarddetailstocsv"><code>WriteOnboardDetailsToCsv</code></a>, <a href="#uploadcsv"><code>UploadCsv</code></a>, <a href="#tryskipandvalidate"><code>TrySkipAndValidate</code></a>, <a href="#onboardcandidates"><code>OnboardCandidates</code></a> methods.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:5"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><input id="__tabbed_14_3" name="__tabbed_14" type="radio" /><input id="__tabbed_14_4" name="__tabbed_14" type="radio" /><input id="__tabbed_14_5" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Method Signature</label><label for="__tabbed_14_2">Parameters</label><label for="__tabbed_14_3">Returns</label><label for="__tabbed_14_4">Functionality</label><label for="__tabbed_14_5">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">BulkOnboard</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboardDetailsList</code></td>
+<td><code>List&lt;OnboardDetails&gt;</code></td>
+<td>The list of employee details to validate.</td>
+</tr>
+<tr>
+<td><code>nodeName</code> (optional)</td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>A list of <code>OnboardDetails</code> objects that have been successfully onboarded.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Download CSV</strong>:<ul>
+<li>Calls the <a href="#downloadmultionboardcsv"><code>DownloadMultiOnboardCsv</code></a> method to download the CSV file.</li>
+</ul>
+</li>
+<li><strong>Write to CSV</strong>:<ul>
+<li>Calls the <a href="#writeonboarddetailstocsv"><code>WriteOnboardDetailsToCsv</code></a> method to write the onboard details to the CSV file.</li>
+</ul>
+</li>
+<li><strong>Upload CSV</strong>:<ul>
+<li>Calls the <a href="#uploadcsv"><code>UploadCsv</code></a> method to upload the CSV file.</li>
+</ul>
+</li>
+<li><strong>Try Skip and Validate</strong>:<ul>
+<li>Calls the <a href="#tryskipandvalidate"><code>TrySkipAndValidate</code></a> method to skip and validate the imported data.</li>
+</ul>
+</li>
+<li><strong>Onboard Candidates</strong>:<ul>
+<li>Calls the <a href="#onboardcandidates"><code>OnboardCandidates</code></a> method to onboard the candidates.</li>
+</ul>
+</li>
+<li><strong>Return Updated List</strong>:<ul>
+<li>Returns the updated list of onboard details after bulk onboarding.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* list of onboard details*/</span><span class="p">;</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="n">onboardDetailsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BulkOnboard</span><span class="p">(</span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;BulkOnboardNode&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="bulkonboardnegative"><strong>BulkOnboardNegative</strong></h4>
+<hr />
+<p>The <code>BulkOnboardNegative</code> method handles the process of bulk onboarding candidates with an intentional error handling workflow. This includes uploading a CSV file, cancelling the import, resolving any errors, validating the imported data, and onboarding the candidates. The method returns a list of onboard details after successful processing. This method uses the <a href="#downloadmultionboardcsv"><code>DownloadMultiOnboardCsv</code></a>, <a href="#writeonboarddetailstocsv"><code>WriteOnboardDetailsToCsv</code></a>, <a href="#uploadcsv"><code>UploadCsv</code></a>, <a href="#cancelimport"><code>CancelImport</code></a>, <a href="#resolveerrors"><code>ResolveErrors</code></a>, and <a href="#validateimporteddata"><code>ValidateImportedData</code></a>, <a href="#onboardcandidates"><code>OnboardCandidates</code></a> methods.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:5"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><input id="__tabbed_15_4" name="__tabbed_15" type="radio" /><input id="__tabbed_15_5" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Method Signature</label><label for="__tabbed_15_2">Parameters</label><label for="__tabbed_15_3">Returns</label><label for="__tabbed_15_4">Functionality</label><label for="__tabbed_15_5">Example Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">BulkOnboardNegative</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsListIncomplete</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nodeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboardDetailsListIncomplete</code></td>
+<td><code>List&lt;OnboardDetails&gt;</code></td>
+<td>The list of incomplete employee details to validate.</td>
+</tr>
+<tr>
+<td><code>onboardDetailsList</code></td>
+<td><code>List&lt;OnboardDetails&gt;</code></td>
+<td>The list of complete employee details to validate.</td>
+</tr>
+<tr>
+<td><code>nodeName</code> (optional)</td>
+<td><code>string</code></td>
+<td>The name of the node to be shown in the report. Default is <code>null</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>A list of <code>OnboardDetails</code> objects that have been successfully onboarded."</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Download CSV</strong>:<ul>
+<li>Calls the <a href="#downloadmultionboardcsv"><code>DownloadMultiOnboardCsv</code></a> method to download the CSV file.</li>
+</ul>
+</li>
+<li><strong>Write to CSV</strong>:<ul>
+<li>Calls the <a href="#writeonboarddetailstocsv"><code>WriteOnboardDetailsToCsv</code></a> method to write the onboard details to the CSV file.</li>
+</ul>
+</li>
+<li><strong>Upload CSV</strong>:<ul>
+<li>Calls the <a href="#uploadcsv"><code>UploadCsv</code></a> method to upload the CSV file.</li>
+</ul>
+</li>
+<li><strong>Cancel Import</strong>:<ul>
+<li>Calls the <a href="#cancelimport"><code>CancelImport</code></a> method to cancel the import process.</li>
+</ul>
+</li>
+<li><strong>Resolve Errors</strong>:<ul>
+<li>Calls the <a href="#resolveerrors"><code>ResolveErrors</code></a> method to resolve any errors in the import process.</li>
+</ul>
+</li>
+<li><strong>Validate Imported Data</strong>:<ul>
+<li>Calls the <a href="#validateimporteddata"><code>ValidateImportedData</code></a> method to validate the imported data.</li>
+</ul>
+</li>
+<li><strong>Onboard Candidates</strong>:<ul>
+<li>Calls the <a href="#onboardcandidates"><code>OnboardCandidates</code></a> method to onboard the candidates.</li>
+</ul>
+</li>
+<li><strong>Return Updated List</strong>:<ul>
+<li>Returns the updated list of onboard details after bulk onboarding.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsListIncomplete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* list of incomplete onboard details*/</span><span class="p">;</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* list of onboard details*/</span><span class="p">;</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">OnboardDetails</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onboardedDetails</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BulkOnboardNegative</span><span class="p">(</span><span class="n">onboardDetailsListIncomplete</span><span class="p">,</span><span class="w"> </span><span class="n">onboardDetailsList</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;BulkOnboardNegativeNode&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.top", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
